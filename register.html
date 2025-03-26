@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Registration Form</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Register</h2>
+    
+    <div class="role-selection">
+        <label>User <input type="radio" name="role" value="user" onclick="showFields('user')"></label>
+        <label>Musician <input type="radio" name="role" value="musician" onclick="showFields('musician')"></label>
+        <label>Admin <input type="radio" name="role" value="admin" onclick="showFields('admin')"></label>
+    </div>
+
+    <form id="registration-form">
+        <div id="common-fields">
+            <label>Full Name:</label>
+            <input type="text" required>
+            
+            <label>Email:</label>
+            <input type="email" required>
+        </div>
+
+        <div id="user-fields" class="role-fields">
+            <label>Username:</label>
+            <input type="text">
+            <label>Task Id</label>
+            <input type="text">
+        </div>
+
+        <div id="musician-fields" class="role-fields">
+            <label>Artist Name:</label>
+            <input type="text">
+            
+            <label>Genre:</label>
+            <input type="text">
+            <label>Task Id</label>
+            <input type="text">
+        </div>
+
+        <div id="admin-fields" class="role-fields">
+            <label>Admin Code:</label>
+            <input type="password">
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<script>
+    function showFields(role) {
+        document.querySelectorAll('.role-fields').forEach(div => div.style.display = 'none');
+        document.getElementById(role + '-fields').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>

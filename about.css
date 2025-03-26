@@ -1,0 +1,158 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Green Text for Headers */
+.green-text {
+    color: #18af16;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo aligned to the left */
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(27, 142, 27);
+}
+
+/* Navigation aligned slightly to the right */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin-left: auto;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(19, 156, 19);
+}
+
+/* About Us Section */
+.about {
+    text-align: center;
+    padding: 100px 20px 50px;
+    
+}
+.about h1{
+    color: #18af16;
+}
+
+/* Features Section */
+.features {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.features h1 {
+    font-size: 36px;
+    color: #18af16;
+    margin-bottom: 20px;
+}
+
+.features ul {
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Meet the Team (Now Horizontal) */
+.team {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.team-member img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Join Us Section (Centered) */
+.join {
+    text-align: center;
+    padding: 50px 20px;
+    background: #222;
+    margin: 40px auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.join h2 {
+    font-size: 28px;
+    color: #18af16;
+}
+
+.join a {
+    display: inline-block;
+    margin-top: 10px;
+    background: #18af16;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.join a:hover {
+    background: #0f8010;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #2db712;
+    text-decoration: none;
+}

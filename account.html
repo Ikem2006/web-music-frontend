@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account - FEDS Music</title>
+    <link rel="stylesheet" href="account.css">
+    <script defer src="account.js"></script>
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header>
+        <div class="logo">FEDS</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="#">Artist</a></li>
+                <li><a href="#">Chatroom</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Account Section -->
+    <section class="account-section">
+        <h1>My Account</h1>
+        
+        <!-- Profile Picture Upload -->
+        <div class="profile-container">
+            <img id="profile-pic" src="img/imgage.jpeg" alt="Profile Picture">
+        </div>
+
+        <!-- Editable User Details -->
+        <div class="account-details">
+            <label>Name:</label>
+            <div class="edit-field">
+                <input type="text" id="user-name" value="Kay Nakashima" disabled>
+                <span class="edit-icon" onclick="editField('user-name')">✏️</span>
+            </div>
+
+            <label>Email:</label>
+            <div class="edit-field">
+                <input type="email" id="user-email" value="kayNakashima@gmail.com" disabled>
+                <span class="edit-icon" onclick="editField('user-email')">✏️</span>
+            </div>
+
+            <label>Password:</label>
+            <div class="edit-field">
+                <input type="password" id="user-password" value="********" disabled>
+                <span class="edit-icon" onclick="editField('user-password')">✏️</span>
+            </div>
+            
+            <button id="save-btn">Save Changes</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact us: <a href="mailto:FEDS@gmail.com">FEDS@gmail.com</a></p>
+        <p>&copy; 2025 FEDS Music. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

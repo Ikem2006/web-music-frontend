@@ -1,0 +1,159 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Artist Profile Section */
+.artist-section {
+    text-align: center;
+    padding: 30px;
+}
+
+/* Profile Picture */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#artist-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+#upload-artist-pic {
+    margin-top: 10px;
+}
+
+/* Editable Artist Details */
+.artist-details {
+    width: 60%;
+    margin: auto;
+    text-align: left;
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.artist-details label {
+    font-size: 1.2em;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.edit-field {
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.edit-field input {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    outline: none;
+}
+
+.edit-icon {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Music Catalog */
+.catalog-section {
+    text-align: center;
+    padding: 30px;
+}
+
+.catalog-container {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#song-name, #upload-song {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#add-song-btn {
+    background: #ff5500;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#add-song-btn:hover {
+    background: #ff7700;
+}
+
+ul#song-list {
+    list-style: none;
+    padding: 0;
+}
+
+ul#song-list li {
+    background: #222;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}

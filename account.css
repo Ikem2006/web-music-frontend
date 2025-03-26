@@ -1,0 +1,131 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: black; /* Darker header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+/* Account Section */
+.account-section {
+    text-align: center;
+    padding: 30px;
+}
+
+/* Profile Picture Upload */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+#upload-pic {
+    margin-top: 10px;
+}
+
+/* Editable User Details */
+.account-details {
+    width: 60%;
+    margin: auto;
+    text-align: left;
+    background: #222;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.account-details label {
+    font-size: 1.2em;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.edit-field {
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.edit-field input {
+    width: 100%;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1em;
+    outline: none;
+}
+
+.edit-icon {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Save Button */
+#save-btn {
+    background: #29d108;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+#save-btn:hover {
+    background: #033005;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}

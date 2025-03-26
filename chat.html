@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom - FEDS Music</title>
+    <link rel="stylesheet" href="chat.css">
+    <script defer src="chat.js"></script>
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header>
+        <div class="logo">FEDS</div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="artist.html">Artist</a></li>
+                <li><a href="chatroom.html">Chatroom</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Chatroom Section -->
+    <section class="chatroom">
+        <h1>Chat with Your Favorite Artists</h1>
+
+        <div class="chat-container">
+            <!-- Chat Messages -->
+            <div class="chat-box" id="chat-box">
+                <!-- Example Messages -->
+                <div class="message artist-message">
+                    <p><strong>Artist:</strong> Hey! Welcome to my chatroom.</p>
+                </div>
+                <div class="message user-message">
+                    <p><strong>You:</strong> Hi! Love your music.</p>
+                </div>
+            </div>
+
+            <!-- Chat Input Box -->
+            <div class="chat-input">
+                <input type="text" id="chat-message" placeholder="Type a message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact us: <a href="mailto:FEDS@gmail.com">FEDS@gmail.com</a></p>
+        <p>&copy; 2025 FEDS Music. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000; 
+    color: white; 
+}
+
+.payment-container {
+    background: #1c1b1b; 
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
+    width: 300px;
+}
+
+input, button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ffffff; 
+    border-radius: 5px;
+    background: #222222; 
+    color: white; 
+}
+
+input::placeholder {
+    color: #bbbbbb; 
+}
+
+button {
+    background: #28a745; 
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #218838; 
+}
