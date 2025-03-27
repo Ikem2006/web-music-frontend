@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   paymentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const task_id = crypto.randomUUID(); // ✅ frontend-generated task ID
+    const task_id = crypto.randomUUID(); 
 
     const formData = {
       account_name: document.getElementById("account_name").value,
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("feds_task_id", task_id);
 
         // ✅ Redirect to register.html
-        window.location.href = "register.html";
+        window.location.href = "html/register.html";
       } else {
         alert(`❌ Error: ${result.message}`);
       }
