@@ -1,4 +1,5 @@
 const BASE_URL = "https://web-music-proj.onrender.com";
+const SOCKET_URL = BASE_URL; // or update if you're serving Socket.IO differently
 
 document.getElementById("login-form").addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -11,8 +12,6 @@ document.getElementById("login-form").addEventListener("submit", async function 
     musician: `${BASE_URL}/musician/authenticate_musician`,
     admin: `${BASE_URL}/admin/authenticate_admin`,
   };
-
-  let found = false;
 
   for (const [role, endpoint] of Object.entries(endpoints)) {
     try {
@@ -30,30 +29,40 @@ document.getElementById("login-form").addEventListener("submit", async function 
       const result = await response.json();
 
       if (result.status === "success") {
-        console.log(`Logged in as ${role}`);
+        // Save session details
         localStorage.setItem("access_token", result.access_token);
         localStorage.setItem("role", role);
         localStorage.setItem("username", username);
 
-        // Join appropriate room
-        await fetch(`${BASE_URL}/${role}/join_${role}_room`, {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${result.access_token}`,
-            "Content-Type": "application/json",
-          },
-        });
+        // Check if room was already joined to prevent double room creation
+        const joinedRooms = JSON.parse(localStorage.getItem("joined_rooms") || "{}");
 
-        window.location.href = "home.html";
-        found = true;
-        break;
+        if (!joinedRooms[username]) {
+          const socket = io(SOCKET_URL);
+
+          socket.emit("join_room", {
+            id: username,
+            role: role,
+          });
+
+          // Mark this room as joined so it won't trigger again
+          joinedRooms[username] = true;
+          localStorage.setItem("joined_rooms", JSON.stringify(joinedRooms));
+        }
+
+        const redirects = {
+          user: "user_home.html",
+          musician: "musician_home.html",
+          admin: "admin_home.html",
+        };
+
+        window.location.href = redirects[role];
+        return;
       }
     } catch (err) {
       console.error(`${role} login failed:`, err);
     }
   }
 
-  if (!found) {
-    alert("Login failed. Invalid credentials or server error.");
-  }
+  alert("Login failed. Invalid credentials or server error.");
 });

@@ -1,9 +1,9 @@
 // Testimonials Data
 const testimonials = [
-    { image: "img/kay.jpeg", opinion: "FEDS is the best music platform! I can find all my favorite songs here!" },
-    { image: "img/nigga.jpeg", opinion: "I love FEDS because it lets me chat with my favorite artists!" },
-    { image: "img/india.jpeg", opinion: "Great sound quality and easy to use!!" },
-    { image: "img/guy.jpeg", opinion: "The best music streaming site hands down!" }
+    { image: "../img/kay.jpeg", opinion: "FEDS is the best music platform! I can find all my favorite songs here!" },
+    { image: "../img/nigga.jpeg", opinion: "I love FEDS because it lets me chat with my favorite artists!" },
+    { image: "../img/india.jpeg", opinion: "Great sound quality and easy to use!!" },
+    { image: "../img/guy.jpeg", opinion: "The best music streaming site hands down!" }
 ];
 
 let currentTestimonial = 0;
