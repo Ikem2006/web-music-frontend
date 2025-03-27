@@ -23,8 +23,15 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
+    color: green;
 }
 
+.logo img {
+    width: 40px;  
+    height: auto; 
+    margin-left: 10px; 
+    vertical-align: middle;
+}
 nav ul {
     list-style: none;
     display: flex;
@@ -42,7 +49,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: gold;
+    color: rgb(29, 150, 23);
 }
 
 /* Welcome Section */

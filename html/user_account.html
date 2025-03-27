@@ -11,14 +11,17 @@
 
     <!-- Fixed Header -->
     <header>
-        <div class="logo">FEDS</div>
+        <div class="logo">FEDS
+            <img src="img/music.webp">
+        </div>
         <nav>
             <ul>
+               
                 <li><a href="home.html">Home</a></li>
                 <li><a href="account.html">Account</a></li>
-                <li><a href="#">Artist</a></li>
-                <li><a href="#">Chatroom</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="artist.html">Artist</a></li>
+                <li><a href="chat.html">Chatroom</a></li>
+                <li><a href="about.html">About Us</a></li>
             </ul>
         </nav>
     </header>
@@ -36,20 +39,15 @@
         <div class="account-details">
             <label>Name:</label>
             <div class="edit-field">
-                <input type="text" id="user-name" value="Kay Nakashima" disabled>
+                <input type="text" id="user-name" value="Username" disabled>
                 <span class="edit-icon" onclick="editField('user-name')">✏️</span>
             </div>
 
             <label>Email:</label>
             <div class="edit-field">
-                <input type="email" id="user-email" value="kayNakashima@gmail.com" disabled>
+                <input type="email" id="user-email" value="Username@example.com" disabled>
                 <span class="edit-icon" onclick="editField('user-email')">✏️</span>
             </div>
-
-            <label>Password:</label>
-            <div class="edit-field">
-                <input type="password" id="user-password" value="********" disabled>
-                <span class="edit-icon" onclick="editField('user-password')">✏️</span>
             </div>
             
             <button id="save-btn">Save Changes</button>

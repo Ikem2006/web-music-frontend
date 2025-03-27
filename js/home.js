@@ -28,3 +28,25 @@ document.getElementById("next").addEventListener("click", () => {
 
 // Initialize the first testimonial
 updateTestimonial();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const stars = document.querySelectorAll(".star");
+    let selectedRating = 0;
+
+    stars.forEach((star, index) => {
+        star.addEventListener("click", function () {
+            if (selectedRating === index + 1) {
+                // If clicked again at the max selection, reset all stars
+                stars.forEach(s => s.style.color = "black");
+                selectedRating = 0;
+            } else {
+                // Highlight stars up to the clicked one
+                stars.forEach((s, i) => {
+                    s.style.color = i <= index ? "yellow" : "black";
+                });
+                selectedRating = index + 1;
+            }
+        });
+    });
+});
+

@@ -19,7 +19,13 @@ header {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: white;
+    color: rgb(34, 136, 22);
+}
+.logo img {
+    width: 40px;  
+    height: auto; 
+    margin-left: 10px; 
+    vertical-align: middle;
 }
 
 nav ul {
@@ -29,13 +35,16 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 50px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 16px;
+}
+nav ul li a:hover {
+    color: rgb(29, 150, 23);
 }
 
 /* Artist Profile Section */
@@ -122,7 +131,7 @@ nav ul li a {
 }
 
 #add-song-btn {
-    background: #ff5500;
+    background: #29c318;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -132,7 +141,7 @@ nav ul li a {
 }
 
 #add-song-btn:hover {
-    background: #ff7700;
+    background: #113d0b;
 }
 
 ul#song-list {
