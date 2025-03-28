@@ -1,5 +1,5 @@
 const SOCKET_URL = "https://web-music-proj.onrender.com";
-const socket = io(SOCKET_URL);
+const socket = io(SOCKET_URL, { transports: ["websocket"] });
 
 const token = localStorage.getItem("access_token");
 const role = localStorage.getItem("role");
@@ -26,8 +26,6 @@ if (role === "user") homeLink.href = "user_home.html";
 else if (role === "musician") homeLink.href = "musician_home.html";
 else if (role === "admin") homeLink.href = "admin_home.html";
 
-
-// DOM
 const userList = document.getElementById("user-list");
 const searchBar = document.getElementById("search-bar");
 const chatBox = document.getElementById("chat-box");
@@ -36,10 +34,11 @@ const sendBtn = document.getElementById("send-btn");
 
 let currentRoom = null;
 
-// Request active rooms from server
-socket.emit("get_active_rooms");
+// 💡 Wait until socket is connected
+socket.on("connect", () => {
+  socket.emit("get_active_rooms");
+});
 
-// Listen for response
 socket.on("active_rooms", (users) => {
   userList.innerHTML = "";
   users.forEach((user) => {
@@ -86,7 +85,7 @@ socket.on("receive_message", (msg) => {
   chatBox.appendChild(li);
 });
 
-// Search bar
+// Search
 searchBar.addEventListener("input", function () {
   const query = this.value.toLowerCase();
   const cards = document.querySelectorAll(".user-card");
