@@ -1,60 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatroom - FEDS Music</title>
-    <link rel="stylesheet" href="chat.css">
-    <script defer src="chat.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chatroom - FEDS Music</title>
+  <link rel="stylesheet" href="../css/chat.css" />
 </head>
 <body>
+  <header>
+    <div class="logo">
+      <span class="logo-text">FEDS</span>
+      <img src="../img/music.webp" alt="Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a id="home-link" href="#">Home</a></li>
+        <li><a id="account-link" href="#">Account</a></li>
+        <li><a id="artist-link" href="#">Artist</a></li>
+        <li><a href="chatroom.html">Chatroom</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Fixed Header -->
-    <header>
-        <div class="logo">FEDS
-            <img src="img/music.webp">
-        </div>
-        <nav>
-            <ul>
-               
-                <li><a href="home.html">Home</a></li>
-                <li><a href="account.html">Account</a></li>
-                <li><a href="artist.html">Artist</a></li>
-                <li><a href="chatroom.html">Chatroom</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+  <main>
+    <h1 class="chat-title">Chatroom</h1>
+    <input type="text" id="search-bar" placeholder="Search clients..." />
+    <div id="client-list" class="client-list"></div>
 
-    <!-- Chatroom Section -->
-    <section class="chatroom">
-        <h1>Chat with Your Favorite Artists</h1>
+    <div id="chat-area" class="chat-area hidden">
+      <div id="chat-header"></div>
+      <div id="chat-messages" class="chat-messages"></div>
+      <input type="text" id="chat-input" placeholder="Type your message..." />
+      <button id="send-btn">Send</button>
+    </div>
+  </main>
 
-        <div class="chat-container">
-            <!-- Chat Messages -->
-            <div class="chat-box" id="chat-box">
-                <!-- Example Messages -->
-                <div class="message artist-message">
-                    <p><strong>Artist:</strong> Hey! Welcome to my chatroom.</p>
-                </div>
-                <div class="message user-message">
-                    <p><strong>You:</strong> Hi! Love your music.</p>
-                </div>
-            </div>
+  <footer>
+    <p class="footer-text">© 2025 FEDS Music. All rights reserved.</p>
+  </footer>
 
-            <!-- Chat Input Box -->
-            <div class="chat-input">
-                <input type="text" id="chat-message" placeholder="Type a message...">
-                <button id="send-btn">Send</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>Contact us: <a href="mailto:FEDS@gmail.com">FEDS@gmail.com</a></p>
-        <p>&copy; 2025 FEDS Music. All rights reserved.</p>
-    </footer>
-
+  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+  <script src="../js/chat.js"></script>
 </body>
 </html>
