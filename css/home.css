@@ -1,15 +1,13 @@
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black; /* Darkish background */
+    background-color: black;
     color: white;
 }
 
-/* Header */
 header {
-    background-color: black; /* Darker header */
+    background-color: black;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -21,21 +19,28 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 36px;
     font-weight: bold;
     color: green;
 }
 
-.logo img {
-    width: 40px;  
-    height: auto; 
-    margin-left: 10px; 
-    vertical-align: middle;
+.logo-img {
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
 }
+
 nav ul {
     list-style: none;
     display: flex;
+    gap: 30px;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -45,20 +50,19 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
-    color: rgb(29, 150, 23);
+nav ul li a:hover,
+.footer-text:hover {
+    color: green;
 }
 
-/* Welcome Section */
 .welcome {
     text-align: center;
     padding: 300px 90px;
     background-color: black;
-    margin-top: 80px; 
-
+    margin-top: 80px;
 }
 
 .welcome h1 {
@@ -69,31 +73,29 @@ nav ul li a:hover {
     font-size: 20px;
 }
 
-/* Awards Section */
 .awards {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 70px;
-    background-color: #222
+    background-color: #222;
+    flex-wrap: wrap;
 }
 
 .award-image img {
     width: 140px;
     height: 200px;
     border-radius: 5px;
-
 }
 
 .award-text {
     max-width: 600px;
-  
+    padding: 20px;
 }
 
-/* Testimonials Section */
 .testimonials {
     text-align: center;
-    background-color: #222; /* Darkish */
+    background-color: #222;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -109,16 +111,9 @@ nav ul li a:hover {
     padding: 20px;
     background-color: #333;
     border-radius: 10px;
-    position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-/* User Image Styling */
-.testimonial-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .testimonial-image img {
@@ -128,19 +123,13 @@ nav ul li a:hover {
     object-fit: cover;
 }
 
-/* Feedback Text Styling */
 .testimonial-text {
     flex: 2;
     text-align: left;
-    padding-left: 20px;
-}
-
-.testimonial-text p {
     font-style: italic;
     font-size: 1.2rem;
 }
 
-/* Navigation Arrows */
 .testimonial-nav {
     margin-top: 20px;
     display: flex;
@@ -161,11 +150,10 @@ nav ul li a:hover {
     color: gold;
 }
 
-/* Rating Section */
 .advertisement {
     text-align: center;
     padding: 50px;
-    background-color: #222; /* Darkish */
+    background-color: #222;
 }
 
 .rating {
@@ -181,13 +169,17 @@ nav ul li a:hover {
     transition: 0.3s;
 }
 
-.star:hover, .star.selected {
+.star:hover {
     color: gold;
 }
 
-/* Footer */
 footer {
-    background-color: #111; /* Darker footer */
+    background-color: #111;
     text-align: center;
     padding: 20px;
+}
+
+.footer-text {
+    transition: color 0.3s;
+    color: white;
 }

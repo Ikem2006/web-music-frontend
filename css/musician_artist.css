@@ -1,4 +1,4 @@
-/* General Page Styling */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #181818;
@@ -9,33 +9,38 @@ body {
 
 /* Header */
 header {
-    background-color: black; /* Darker header */
+    background-color: black;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
     font-size: 24px;
     font-weight: bold;
-    color: green;
+    color: rgb(34, 136, 22);
 }
 .logo img {
-    width: 40px;  
-    height: auto; 
-    margin-left: 10px; 
-    vertical-align: middle;
+    width: 36px;
+    height: 36px;
+    margin-left: 10px;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     padding: 0;
+    margin: 0;
+    gap: 40px;
 }
 
 nav ul li {
@@ -45,19 +50,24 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    transition: color 0.3s;
 }
 nav ul li a:hover {
-    color: rgb(29, 150, 23);
+    color: green;
 }
 
-/* Account Section */
-.account-section {
+/* Push content below fixed header */
+.main-content {
+    padding-top: 100px;
+}
+
+/* Artist Profile Section */
+.artist-section {
     text-align: center;
     padding: 30px;
 }
 
-/* Profile Picture Upload */
+/* Profile Picture */
 .profile-container {
     display: flex;
     flex-direction: column;
@@ -65,7 +75,7 @@ nav ul li a:hover {
     margin-bottom: 20px;
 }
 
-#profile-pic {
+#artist-pic {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -73,21 +83,27 @@ nav ul li a:hover {
     border: 3px solid white;
 }
 
-#upload-pic {
+#upload-artist-pic {
     margin-top: 10px;
 }
 
-/* Editable User Details */
-.account-details {
+/* Editable Artist Details */
+.artist-details {
     width: 60%;
-    margin: auto;
+    margin: 20px auto;
     text-align: left;
     background: #222;
     padding: 20px;
     border-radius: 8px;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
-.account-details label {
+.artist-details:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.artist-details label {
     font-size: 1.2em;
     display: block;
     margin: 10px 0 5px;
@@ -99,6 +115,8 @@ nav ul li a:hover {
     background: #333;
     padding: 10px;
     border-radius: 5px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 15px;
 }
 
 .edit-field input {
@@ -115,26 +133,65 @@ nav ul li a:hover {
     margin-left: 10px;
 }
 
-/* Save Button */
-#save-btn {
-    background: #29d108;
+/* Music Catalog */
+.catalog-section {
+    text-align: center;
+    padding: 30px;
+}
+
+.catalog-container {
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#song-name,
+#upload-song {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#add-song-btn {
+    background: #29c318;
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
     font-size: 1.1em;
     cursor: pointer;
-    margin-top: 15px;
 }
 
-#save-btn:hover {
-    background: #033005;
+#add-song-btn:hover {
+    background: #113d0b;
 }
 
-/* Footer */
+ul#song-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+ul#song-list li {
+    background: #222;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+}
+
 footer {
     background-color: #111;
-    padding: 10px;
     text-align: center;
-    margin-top: 20px;
+    padding: 20px;
 }
+
+.footer-text {
+    transition: color 0.3s;
+    color: white;
+}
+

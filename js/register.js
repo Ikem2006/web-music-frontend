@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (result.status === "success") {
         alert("✅ Registration successful! Redirecting to login...");
         localStorage.removeItem("feds_task_id");
-        window.location.href = "login.html";
+        window.location.href = "../html/login.html";
       } else {
         alert(`❌ ${result.message || "Registration failed"}`);
       }

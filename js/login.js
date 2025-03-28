@@ -1,5 +1,5 @@
 const BASE_URL = "https://web-music-proj.onrender.com";
-const SOCKET_URL = BASE_URL; // or update if you're serving Socket.IO differently
+const SOCKET_URL = BASE_URL; 
 
 document.getElementById("login-form").addEventListener("submit", async function (e) {
   e.preventDefault();

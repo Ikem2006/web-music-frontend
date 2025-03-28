@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem("feds_task_id", task_id);
 
         // ✅ Redirect to register.html
-        window.location.href = "html/register.html";
+        window.location.href = "../html/register.html";
       } else {
         alert(`❌ Error: ${result.message}`);
       }

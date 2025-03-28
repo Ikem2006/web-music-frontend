@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musician Account</title>
+  <link rel="stylesheet" href="../css/musician_account.css">
+  <script defer src="../js/musician_account.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <span class="logo-text">FEDS</span>
+      <img src="../img/music.webp" alt="Logo" class="logo-img">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="musician_home.html">Home</a></li>
+        <li><a href="musician_account.html">Account</a></li>
+        <li><a href="musician_artist.html">Artist</a></li>
+        <li><a href="chat.html">Chatroom</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="account-section">
+    <div class="profile-container">
+      <img src="../img/imgage.jpeg" alt="Profile Picture" class="profile-pic">
+      <h2 id="artist-name-display">Artist Name</h2>
+      <div class="field">
+        <label>Artist Name:</label>
+        <input type="text" id="artist-name-input" placeholder="Update artist name">
+        <button class="edit-btn" onclick="updateField('musician_name')">✏️</button>
+      </div>
+      <div class="field">
+        <label>Email:</label>
+        <input type="text" id="email-input" placeholder="Update email">
+        <button class="edit-btn" onclick="updateField('email')">✏️</button>
+      </div>
+      <div class="field">
+        <label>Genre:</label>
+        <input type="text" id="genre-input" placeholder="Update genre">
+        <button class="edit-btn" onclick="updateField('music_genre')">✏️</button>
+      </div>
+
+      <div class="catalogue-upload">
+        <h3 id="catalogue-title">Your Catalogue</h3>
+        <input type="file" id="music-file" />
+        <button onclick="uploadMusic()">Upload Music</button>
+      </div>
+
+      <div class="music-list" id="music-list">
+        <h4>Your Songs</h4>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="footer-text">Contact us: <a href="mailto:FEDS@gmail.com">FEDS@gmail.com</a></p>
+    <p class="footer-text">&copy; 2025 FEDS Music. All rights reserved.</p>
+  </footer>
+</body>
+</html>
