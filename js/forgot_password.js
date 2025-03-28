@@ -17,6 +17,7 @@ document.getElementById("reset-form").addEventListener("submit", async (e) => {
     const endpoint = `${BASE_URL}/${role}/update_${role}_info`;
 
     const body = {
+      [role]: username,
       details: {
         field_to_update: "password",
         field_new_value: newPassword
@@ -27,8 +28,7 @@ document.getElementById("reset-form").addEventListener("submit", async (e) => {
       const res = await fetch(endpoint, {
         method: "PUT",
         headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer fake_token` // We'll fake the JWT to bypass protected route, or in prod you'd use a reset token.
+          "Content-Type": "application/json"
         },
         body: JSON.stringify(body)
       });
@@ -36,13 +36,19 @@ document.getElementById("reset-form").addEventListener("submit", async (e) => {
       const result = await res.json();
 
       if (result.status === "success" || result.message?.includes("updated")) {
-        document.getElementById("status-message").textContent = `Password updated successfully for ${role}`;
+        document.getElementById("status-message").textContent = `Password updated successfully for ${role}. Redirecting...`;
         updated = true;
+
+        // Redirect after 2 seconds
+        setTimeout(() => {
+          window.location.href = "../html/login.html";
+        }, 2000);
+
         break;
       }
 
     } catch (err) {
-      // Try next role
+      console.error(`Error updating password for ${role}:`, err);
     }
   }
 

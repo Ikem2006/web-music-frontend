@@ -12,57 +12,77 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const container = document.getElementById("clients-container");
   const searchInput = document.getElementById("search-input");
-
+  const currentAdmin = localStorage.getItem("username");
   let allClients = [];
 
   try {
     const [usersRes, musiciansRes, adminsRes] = await Promise.all([
-      fetch(`${BASE_URL}/admin/get_users`, { headers: { Authorization: `Bearer ${token}` }}),
-      fetch(`${BASE_URL}/admin/get_musicians`, { headers: { Authorization: `Bearer ${token}` }}),
-      fetch(`${BASE_URL}/admin/get_all_admin`, { headers: { Authorization: `Bearer ${token}` }})
+      fetch(`${BASE_URL}/admin/get_users`, {
+        headers: { Authorization: `Bearer ${token}` },
+      }),
+      fetch(`${BASE_URL}/admin/get_musicians`, {
+        headers: { Authorization: `Bearer ${token}` },
+      }),
+      fetch(`${BASE_URL}/admin/get_all_admin`, {
+        headers: { Authorization: `Bearer ${token}` },
+      }),
     ]);
 
-    const users = await usersRes.json();
-    const musicians = await musiciansRes.json();
-    const admins = await adminsRes.json();
+    const usersData = await usersRes.json();
+    const musiciansData = await musiciansRes.json();
+    const adminsData = await adminsRes.json();
 
-    allClients = [
-      ...users.map(user => ({ ...user, role: "user" })),
-      ...musicians.map(m => ({ ...m, role: "musician" })),
-      ...admins.map(a => ({ ...a, role: "admin" })),
-    ];
+    const users = Object.values(usersData || {}).map((u) => ({
+      ...u,
+      name: u.username || u.name || "Unnamed",
+      role: "user",
+    }));
+
+    const musicians = Object.values(musiciansData || {}).map((m) => ({
+      ...m,
+      name: m.musician_name || "Unnamed",
+      role: "musician",
+    }));
+
+    const admins = Object.values(adminsData || {}).map((a) => ({
+      ...a,
+      name: a.username || a.name || "Unnamed",
+      role: "admin",
+    }));
+
+    allClients = [...users, ...musicians, ...admins];
 
     renderClients(allClients);
 
     searchInput.addEventListener("input", () => {
-      const searchTerm = searchInput.value.toLowerCase();
-      const filtered = allClients.filter(client =>
-        client.username?.toLowerCase().includes(searchTerm) ||
-        client.musician_name?.toLowerCase().includes(searchTerm)
+      const term = searchInput.value.toLowerCase();
+      const filtered = allClients.filter((c) =>
+        c.name.toLowerCase().includes(term)
       );
       renderClients(filtered);
     });
-
   } catch (err) {
     alert("Failed to load clients.");
-    console.error(err);
+    console.error("Client loading error:", err);
   }
 
   function renderClients(clients) {
     container.innerHTML = "";
-    const currentAdmin = localStorage.getItem("username");
+    if (clients.length === 0) {
+      container.innerHTML = "<p>No clients found.</p>";
+      return;
+    }
 
-    clients.forEach(client => {
-      const name = client.username || client.musician_name || "Unknown";
+    clients.forEach((client) => {
       const card = document.createElement("div");
       card.className = "client-card";
       card.innerHTML = `
-        <img src="../img/imgage.jpeg" alt="${name}">
-        <h3>${name}</h3>
+        <img src="../img/imgage.jpeg" alt="${client.name}">
+        <h3>${client.name}</h3>
         <p>${client.role}</p>
         ${
-          client.role !== "admin" || client.username !== currentAdmin
-            ? `<button class="delete-btn" onclick="deleteClient('${client.role}', '${name}')">🗑️</button>`
+          client.role !== "admin" || client.name !== currentAdmin
+            ? `<button class="delete-btn" onclick="deleteClient('${client.role}', '${client.name}')">🗑️</button>`
             : ""
         }
       `;
@@ -92,10 +112,10 @@ async function deleteClient(role, username) {
     const res = await fetch(`${BASE_URL}/admin/${routes[role]}`, {
       method: "DELETE",
       headers: {
-        "Authorization": `Bearer ${token}`,
-        "Content-Type": "application/json"
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(body)
+      body: JSON.stringify(body),
     });
 
     const result = await res.json();

@@ -3,6 +3,6 @@ function goToLogin() {
   }
   
   function goToRegister() {
-    window.location.href = "../html/register.html";
+    window.location.href = "../html/pay.html";
   }
   
