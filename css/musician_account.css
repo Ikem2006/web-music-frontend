@@ -151,6 +151,39 @@ body {
   .song-row a:hover {
     text-decoration: underline;
   }
+  .song-file-input {
+    margin-left: 10px;
+    color: white;
+  }
+  
+  .song-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  .logout-btn, .delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logout-btn {
+    background-color: #2ecc71;
+  }
+  
+  .logout-btn:hover, .delete-btn:hover {
+    opacity: 0.8;
+  }
   
   footer {
     background-color: #111;

@@ -84,3 +84,19 @@ button:hover {
         transform: translateY(0);
     }
 }
+
+.forgot-link {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .forgot-link a {
+    color: #1db954;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .forgot-link a:hover {
+    color: #17a64a;
+  }

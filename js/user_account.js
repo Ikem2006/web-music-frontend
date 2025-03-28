@@ -65,3 +65,44 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   }
   
+  // Logout logic
+document.getElementById("logout-btn").addEventListener("click", () => {
+  localStorage.clear();
+  alert("You have been logged out.");
+  window.location.href = "../html/login.html";
+});
+
+// Delete logic
+document.getElementById("delete-btn").addEventListener("click", async () => {
+  const BASE_URL = "https://web-music-proj.onrender.com";
+  const token = localStorage.getItem("access_token");
+  const password = prompt("Enter your password to delete your account:");
+
+  if (!password) {
+    return alert("Password is required to delete your account.");
+  }
+
+  try {
+    const response = await fetch(`${BASE_URL}/user/delete_user_details`, {
+      method: "DELETE",
+      headers: {
+        "Authorization": `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ password }),
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      alert("Account deleted successfully.");
+      localStorage.clear();
+      window.location.href = "../html/login.html";
+    } else {
+      alert(result.message || "Failed to delete account.");
+    }
+  } catch (err) {
+    console.error(err);
+    alert("Something went wrong while deleting account.");
+  }
+});

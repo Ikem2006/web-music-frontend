@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+  }
+  
+  header {
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: green;
+  }
+  
+  .logo img {
+    width: 40px;
+    height: auto;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav ul li {
+    margin: 0 40px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: rgb(29, 150, 23);
+  }
+  
+  main {
+    padding: 140px 20px 40px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .search-bar {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .search-bar input {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  .clients-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .client-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  
+  .client-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .client-card h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+  }
+  
+  .client-card p {
+    margin: 0;
+    color: gray;
+    font-size: 14px;
+  }
+  
+  .delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+    background: none;
+    border: none;
+  }
+  
+  footer {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  footer a {
+    color: green;
+  }
+  

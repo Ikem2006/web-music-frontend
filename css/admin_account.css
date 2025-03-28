@@ -94,6 +94,43 @@ body {
   .info-field button:hover {
     color: green;
   }
+  .account-actions {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 300px;
+  }
+  
+  #logout-btn,
+  #delete-btn {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #logout-btn {
+    background-color: #24292e;
+    color: white;
+  }
+  
+  #logout-btn:hover {
+    background-color: #00ff88;
+    color: black;
+  }
+  
+  #delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+  }
+  
+  #delete-btn:hover {
+    background-color: #cc0000;
+  }
+  
   
   footer {
     background-color: #111;

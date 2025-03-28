@@ -1,5 +1,4 @@
 const BASE_URL = "https://web-music-proj.onrender.com";
-const SOCKET_URL = BASE_URL;
 
 document.getElementById("login-form").addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -27,7 +26,6 @@ document.getElementById("login-form").addEventListener("submit", async function 
       if (result.status === "success") {
         localStorage.setItem("access_token", result.access_token);
         localStorage.setItem("role", role);
-        localStorage.setItem("username", username);
 
         const redirects = {
           user: "user_home.html",
@@ -43,5 +41,5 @@ document.getElementById("login-form").addEventListener("submit", async function 
     }
   }
 
-  alert("Login failed. Invalid credentials or server error.");
+  document.getElementById("login-status").textContent = "Login failed. Invalid credentials or server error.";
 });

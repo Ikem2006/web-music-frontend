@@ -65,4 +65,44 @@ async function updateField(field) {
   }
 }
 
+// Logout function
+document.getElementById("logout-btn").addEventListener("click", () => {
+  localStorage.clear();
+  alert("Logged out successfully.");
+  window.location.href = "../html/login.html";
+});
+
+// Delete account function
+document.getElementById("delete-btn").addEventListener("click", async () => {
+  const password = prompt("Enter your password to delete your admin account:");
+  if (!password) return alert("Password is required.");
+
+  const token = localStorage.getItem("access_token");
+
+  try {
+    const res = await fetch(`${baseURL}/admin/delete_admin_details`, {
+      method: "DELETE",
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ password })
+    });
+
+    const result = await res.json();
+
+    if (res.ok) {
+      alert("Account deleted successfully.");
+      localStorage.clear();
+      window.location.href = "../html/login.html";
+    } else {
+      alert(result.message || "Failed to delete account.");
+    }
+  } catch (err) {
+    console.error("Delete error:", err);
+    alert("Something went wrong while deleting account.");
+  }
+});
+
+
   

@@ -1,47 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>About Us - FEDS Music</title>
-      <link rel="stylesheet" href="../css/about.css" />
-    </head>
-    <body>
-    
-      <!-- Header -->
-      <header>
-        <div class="logo">
-          FEDS <img src="../img/music.webp" alt="logo"/>
-        </div>
-        <nav>
-          <ul>
-            <li><a id="home-link" href="#">Home</a></li>
-            <li><a id="account-link" href="#">Account</a></li>
-            <li><a id="artist-link" href="#">Artist</a></li>
-            <li><a href="chat.html">Chatroom</a></li>
-            <li><a href="about.html">About Us</a></li>
-          </ul>
-        </nav>
-      </header>
-      
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FEDS Music</title>
+  <link rel="stylesheet" href="../css/landing.css" />
+</head>
 <body>
-    <!-- Access Section -->
-    <section class="access-container">
-        <h2>Welcome to FEDS Music</h2>
-        <p>If you already have an account, log in below.</p>
-        <a href="../html/login.html">Go to Login</a>
+  <div class="container">
+    <div class="box">
+      <h1>Welcome to FEDS Music</h1>
+      <p>Do you have an account?</p>
+      <div class="buttons">
+        <button onclick="goToLogin()">Login</button>
+        <button onclick="goToRegister()">Register</button>
+      </div>
+    </div>
+  </div>
 
-        
-        <a href="../html/pay.html">Proceed to Payment</a>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>Contact us: <a href="mailto:FEDS@gmail.com">FEDS@gmail.com</a></p>
-        <p>&copy; 2025 FEDS Music. All rights reserved.</p>
-    </footer>
-
+  <script src="../js/landing.js"></script>
 </body>
 </html>
