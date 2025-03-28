@@ -22,25 +22,28 @@
       </ul>
     </nav>
   </header>
-
-  <main>
-    <h1 class="chat-title">Chatroom</h1>
-    <input type="text" id="search-bar" placeholder="Search clients..." />
-    <div id="client-list" class="client-list"></div>
-
-    <div id="chat-area" class="chat-area hidden">
+    <!-- Search -->
+    <section class="chat-section">
+      <input type="text" id="search-bar" placeholder="Search users to chat with..." />
+      <div id="user-list" class="user-list"></div>
+    </section>
+  
+    <!-- Chatbox -->
+    <section class="chatbox">
       <div id="chat-header"></div>
-      <div id="chat-messages" class="chat-messages"></div>
-      <input type="text" id="chat-input" placeholder="Type your message..." />
-      <button id="send-btn">Send</button>
-    </div>
-  </main>
-
-  <footer>
-    <p class="footer-text">© 2025 FEDS Music. All rights reserved.</p>
-  </footer>
-
-  <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
-  <script src="../js/chat.js"></script>
-</body>
-</html>
+      <div id="chat-messages" class="messages"></div>
+      <div class="input-area">
+        <input type="text" id="message-input" placeholder="Type your message..." />
+        <button id="send-btn">Send</button>
+      </div>
+    </section>
+  
+    <footer>
+      <p>© 2025 FEDS Music. All rights reserved.</p>
+    </footer>
+  
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script src="../js/chat.js"></script>
+  </body>
+  </html>
+  

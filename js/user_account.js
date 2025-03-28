@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const role = localStorage.getItem("role");
 
  
-    if (!token || role !== "admin") {
+    if (!token || role !== "user") {
       alert("Unauthorized access. Redirecting to login...");
       window.location.href = "../html/login.html";
       return;
