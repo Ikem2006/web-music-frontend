@@ -3,47 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Chatroom - FEDS Music</title>
+  <title>Chat Room</title>
   <link rel="stylesheet" href="../css/chat.css" />
 </head>
 <body>
   <header>
-    <div class="logo">
-      <span class="logo-text">FEDS</span>
-      <img src="../img/music.webp" alt="Logo" />
-    </div>
+    <h1>🎧 FEDS Chat Room</h1>
     <nav>
-      <ul>
-        <li><a id="home-link" href="#">Home</a></li>
-        <li><a id="account-link" href="#">Account</a></li>
-        <li><a id="artist-link" href="#">Artist</a></li>
-        <li><a href="chatroom.html">Chatroom</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
+      <a id="home-link">Home</a>
+      <a id="artist-link">Artists</a>
+      <a id="account-link">Account</a>
     </nav>
   </header>
-    <!-- Search -->
-    <section class="chat-section">
-      <input type="text" id="search-bar" placeholder="Search users to chat with..." />
+
+  <main>
+    <section class="chat-sidebar">
+      <input type="text" id="search-bar" placeholder="Search users..." />
       <div id="user-list" class="user-list"></div>
     </section>
-  
-    <!-- Chatbox -->
-    <section class="chatbox">
-      <div id="chat-header"></div>
-      <div id="chat-messages" class="messages"></div>
-      <div class="input-area">
-        <input type="text" id="message-input" placeholder="Type your message..." />
+
+    <section class="chat-main">
+      <h2 id="chat-room-title">Select a user to start chatting</h2>
+      <ul id="chat-box" class="chat-box"></ul>
+      <div class="chat-input-wrapper">
+        <input type="text" id="chat-input" placeholder="Type your message..." />
         <button id="send-btn">Send</button>
       </div>
     </section>
-  
-    <footer>
-      <p>© 2025 FEDS Music. All rights reserved.</p>
-    </footer>
-  
-    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
-    <script src="../js/chat.js"></script>
-  </body>
-  </html>
-  
+  </main>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="../js/chat.js"></script>
+</body>
+</html>

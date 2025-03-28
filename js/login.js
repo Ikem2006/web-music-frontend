@@ -1,5 +1,5 @@
 const BASE_URL = "https://web-music-proj.onrender.com";
-const SOCKET_URL = BASE_URL; 
+const SOCKET_URL = BASE_URL;
 
 document.getElementById("login-form").addEventListener("submit", async function (e) {
   e.preventDefault();
@@ -15,11 +15,7 @@ document.getElementById("login-form").addEventListener("submit", async function 
 
   for (const [role, endpoint] of Object.entries(endpoints)) {
     try {
-      const body =
-        role === "musician"
-          ? { music_name: username, password }
-          : { username, password };
-
+      const body = role === "musician" ? { music_name: username, password } : { username, password };
       const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -29,26 +25,9 @@ document.getElementById("login-form").addEventListener("submit", async function 
       const result = await response.json();
 
       if (result.status === "success") {
-        // Save session details
         localStorage.setItem("access_token", result.access_token);
         localStorage.setItem("role", role);
         localStorage.setItem("username", username);
-
-        // Check if room was already joined to prevent double room creation
-        const joinedRooms = JSON.parse(localStorage.getItem("joined_rooms") || "{}");
-
-        if (!joinedRooms[username]) {
-          const socket = io(SOCKET_URL);
-
-          socket.emit("join_room", {
-            id: username,
-            role: role,
-          });
-
-          // Mark this room as joined so it won't trigger again
-          joinedRooms[username] = true;
-          localStorage.setItem("joined_rooms", JSON.stringify(joinedRooms));
-        }
 
         const redirects = {
           user: "user_home.html",

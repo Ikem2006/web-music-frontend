@@ -1,5 +1,5 @@
-const SOCKET_URL = "https://web-music-proj.onrender.com";
-const socket = io(SOCKET_URL, { transports: ["websocket"] });
+const BASE_URL = "https://web-music-proj.onrender.com";
+const socket = io(BASE_URL, { transports: ["websocket"] });
 
 const token = localStorage.getItem("access_token");
 const role = localStorage.getItem("role");
@@ -10,57 +10,75 @@ if (!token || !role || !username) {
   window.location.href = "../html/login.html";
 }
 
-// Role-based links
-const accountLink = document.getElementById("account-link");
-if (role === "user") accountLink.href = "user_account.html";
-else if (role === "musician") accountLink.href = "musician_account.html";
-else if (role === "admin") accountLink.href = "admin_account.html";
+const endpoints = {
+  user: `${BASE_URL}/user/get_users`,
+  musician: `${BASE_URL}/musician/get_users`,
+  admin: `${BASE_URL}/admin/get_users`,
+};
 
-const artistLink = document.getElementById("artist-link");
-if (role === "user") artistLink.href = "user_artist.html";
-else if (role === "musician") artistLink.href = "musician_artist.html";
-else if (role === "admin") artistLink.href = "admin_artist.html";
-
-const homeLink = document.getElementById("home-link");
-if (role === "user") homeLink.href = "user_home.html";
-else if (role === "musician") homeLink.href = "musician_home.html";
-else if (role === "admin") homeLink.href = "admin_home.html";
+const artistEndpoints = {
+  user: `${BASE_URL}/user/get_musicians`,
+  musician: `${BASE_URL}/musician/get_musicians`,
+  admin: `${BASE_URL}/admin/get_musicians`,
+};
 
 const userList = document.getElementById("user-list");
-const searchBar = document.getElementById("search-bar");
 const chatBox = document.getElementById("chat-box");
 const chatInput = document.getElementById("chat-input");
 const sendBtn = document.getElementById("send-btn");
+const searchBar = document.getElementById("search-bar");
+const roomTitle = document.getElementById("chat-room-title");
 
 let currentRoom = null;
 
-// 💡 Wait until socket is connected
-socket.on("connect", () => {
-  socket.emit("get_active_rooms");
-});
+// Join own room
+socket.emit("join_room", { username });
 
-socket.on("active_rooms", (users) => {
-  userList.innerHTML = "";
-  users.forEach((user) => {
-    if (user.username !== username) {
+// Fetch all users & musicians
+async function loadClients() {
+  try {
+    const headers = { Authorization: `Bearer ${token}` };
+
+    const [usersRes, musiciansRes] = await Promise.all([
+      fetch(endpoints[role], { headers }),
+      fetch(artistEndpoints[role], { headers }),
+    ]);
+
+    const users = await usersRes.json();
+    const musicians = await musiciansRes.json();
+
+    const clients = [...users, ...musicians].filter(client => client.username !== username && client.music_name !== username);
+
+    userList.innerHTML = "";
+
+    clients.forEach((client) => {
+      const clientName = client.username || client.music_name;
+      const clientRole = client.username ? "user" : "musician";
+
       const card = document.createElement("div");
       card.className = "user-card";
       card.innerHTML = `
-        <img src="../img/imgage.jpeg" alt="${user.username}" />
+        <img src="../img/imgage.jpeg" />
         <div class="user-info">
-          <h3>${user.username}</h3>
-          <p>${user.role}</p>
+          <h3>${clientName}</h3>
+          <p>${clientRole}</p>
         </div>
       `;
+
       card.addEventListener("click", () => {
-        currentRoom = user.username;
-        document.getElementById("chat-room-title").textContent = `Chat with ${user.username}`;
+        currentRoom = clientName;
+        roomTitle.textContent = `Chat with ${clientName}`;
         chatBox.innerHTML = "";
       });
+
       userList.appendChild(card);
-    }
-  });
-});
+    });
+  } catch (err) {
+    console.error("Error loading clients:", err);
+  }
+}
+
+loadClients();
 
 // Send message
 sendBtn.addEventListener("click", () => {
@@ -80,9 +98,11 @@ sendBtn.addEventListener("click", () => {
 
 // Receive message
 socket.on("receive_message", (msg) => {
-  const li = document.createElement("li");
-  li.textContent = `${msg.sender}: ${msg.text}`;
-  chatBox.appendChild(li);
+  if (msg.sender === currentRoom || msg.sender === username) {
+    const li = document.createElement("li");
+    li.textContent = `${msg.sender}: ${msg.text}`;
+    chatBox.appendChild(li);
+  }
 });
 
 // Search
