@@ -1,196 +1,200 @@
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #181818;
-    color: white;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* Basic font for readability */
+    background-color: #181818; /* Dark background color */
+    color: white; /* Light text for contrast */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
 /* Header */
 header {
-    background-color: black;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    background-color: black; /* Dark background for header */
+    padding: 20px; /* Padding for spacing around content */
+    display: flex; /* Use flexbox for header layout */
+    justify-content: space-between; /* Space out logo and navigation */
+    align-items: center; /* Align items vertically centered */
+    width: 100%; /* Full width of the header */
+    top: 0; /* Position the header at the top */
+    z-index: 1000; /* Ensure header is on top of other content */
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+    display: flex; /* Flexbox for aligning logo text and image */
+    align-items: center; /* Vertically center the items */
 }
 
 .logo-text {
-    font-size: 24px;
-    font-weight: bold;
-    color: rgb(34, 136, 22);
+    font-size: 24px; /* Logo text size */
+    font-weight: bold; /* Bold font for prominence */
+    color: rgb(34, 136, 22); /* Green color for the logo text */
 }
+
 .logo img {
-    width: 36px;
-    height: 36px;
-    margin-left: 10px;
+    width: 36px; /* Set logo image width */
+    height: 36px; /* Set logo image height */
+    margin-left: 10px; /* Space between text and image */
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    gap: 40px;
+    list-style: none; /* Remove list style (bullets) */
+    display: flex; /* Use flexbox for navigation */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    gap: 40px; /* Space between navigation items */
 }
 
 nav ul li {
-    margin: 0 50px;
+    margin: 0 50px; /* Space between each navigation item */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text for navigation */
+    transition: color 0.3s; /* Smooth color transition on hover */
 }
+
 nav ul li a:hover {
-    color: green;
+    color: green; /* Change text color on hover */
 }
 
 /* Push content below fixed header */
 .main-content {
-    padding-top: 100px;
+    padding-top: 100px; /* Add padding to the top to account for the fixed header */
 }
 
 /* Artist Profile Section */
 .artist-section {
-    text-align: center;
-    padding: 30px;
+    text-align: center; /* Center-align the content */
+    padding: 30px; /* Padding around the artist section */
 }
 
 /* Profile Picture */
 .profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
+    display: flex; /* Flexbox for profile container */
+    flex-direction: column; /* Stack profile picture and button vertically */
+    align-items: center; /* Center-align the profile picture and button */
+    margin-bottom: 20px; /* Space below the profile section */
 }
 
 #artist-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid white;
+    width: 120px; /* Set the profile picture width */
+    height: 120px; /* Set the profile picture height */
+    border-radius: 50%; /* Make the profile picture circular */
+    object-fit: cover; /* Crop image to fit the circle */
+    border: 3px solid white; /* White border around the profile picture */
 }
 
 #upload-artist-pic {
-    margin-top: 10px;
+    margin-top: 10px; /* Space between profile picture and upload button */
 }
 
 /* Editable Artist Details */
 .artist-details {
-    width: 60%;
-    margin: 20px auto;
-    text-align: left;
-    background: #222;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #333;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    width: 60%; /* Set width of the details container */
+    margin: 20px auto; /* Center the details container */
+    text-align: left; /* Align text to the left */
+    background: #222; /* Dark background for the details container */
+    padding: 20px; /* Padding inside the details container */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #333; /* Border with a dark color */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05); /* Soft shadow effect */
 }
 
 .artist-details:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Add margin between details sections */
 }
 
 .artist-details label {
-    font-size: 1.2em;
-    display: block;
-    margin: 10px 0 5px;
+    font-size: 1.2em; /* Larger font for labels */
+    display: block; /* Make labels block-level elements */
+    margin: 10px 0 5px; /* Space around the labels */
 }
 
+/* Editable fields in artist details */
 .edit-field {
-    display: flex;
-    align-items: center;
-    background: #333;
-    padding: 10px;
-    border-radius: 5px;
-    border-bottom: 1px solid #444;
-    margin-bottom: 15px;
+    display: flex; /* Flexbox for input fields and icons */
+    align-items: center; /* Vertically center items */
+    background: #333; /* Dark background for input fields */
+    padding: 10px; /* Padding inside the input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+    border-bottom: 1px solid #444; /* Border below input fields */
+    margin-bottom: 15px; /* Space between fields */
 }
 
 .edit-field input {
-    width: 100%;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1em;
-    outline: none;
+    width: 100%; /* Full width for input fields */
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    color: white; /* White text for inputs */
+    font-size: 1em; /* Default font size for inputs */
+    outline: none; /* Remove outline on focus */
 }
 
 .edit-icon {
-    cursor: pointer;
-    margin-left: 10px;
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-left: 10px; /* Space between input field and edit icon */
 }
 
 /* Music Catalog */
 .catalog-section {
-    text-align: center;
-    padding: 30px;
+    text-align: center; /* Center-align the catalog section */
+    padding: 30px; /* Padding around the catalog section */
 }
 
 .catalog-container {
-    margin: 20px auto;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    margin: 20px auto; /* Center the catalog container */
+    display: flex; /* Use flexbox for the catalog layout */
+    justify-content: center; /* Center the content */
+    gap: 10px; /* Space between items */
 }
 
 #song-name,
 #upload-song {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
+    padding: 10px; /* Padding inside the input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+    border: none; /* Remove borders */
 }
 
 #add-song-btn {
-    background: #29c318;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
+    background: #29c318; /* Green background for the button */
+    color: white; /* White text for the button */
+    padding: 10px 15px; /* Padding inside the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1.1em; /* Slightly larger font size */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 #add-song-btn:hover {
-    background: #113d0b;
+    background: #113d0b; /* Darker green on hover */
 }
 
 ul#song-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
+    list-style: none; /* Remove bullets from the list */
+    padding: 0; /* Remove padding */
+    margin-top: 30px; /* Space above the song list */
 }
 
 ul#song-list li {
-    background: #222;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #444;
+    background: #222; /* Dark background for each list item */
+    padding: 10px; /* Padding inside each list item */
+    margin: 10px 0; /* Space between list items */
+    border-radius: 5px; /* Rounded corners for list items */
+    display: flex; /* Flexbox for song layout */
+    justify-content: space-between; /* Space between song name and controls */
+    align-items: center; /* Vertically center the items */
+    border-bottom: 1px solid #444; /* Border below each item */
 }
 
+/* Footer */
 footer {
-    background-color: #111;
-    text-align: center;
-    padding: 20px;
+    background-color: #111; /* Dark background for footer */
+    text-align: center; /* Center-align the footer text */
+    padding: 20px; /* Padding around the footer */
 }
 
 .footer-text {
-    transition: color 0.3s;
-    color: white;
+    transition: color 0.3s; /* Smooth color transition on hover */
+    color: white; /* White text for footer */
 }

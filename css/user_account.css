@@ -1,167 +1,180 @@
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
-  }
-  
-  header {
-    background-color: black;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-text {
-    font-size: 36px;
-    font-weight: bold;
-    color: green;
-  }
-  
-  .logo-img {
-    width: 36px;
-    height: 36px;
-    margin-left: 10px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    padding: 0;
-    margin: 0;
-  }
-
-  nav ul li {
-    margin: 0 50px;
+  font-family: Arial, sans-serif; /* Set the font for the body */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: black; /* Set the background color to black */
+  color: white; /* Set text color to white */
 }
 
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover,
-  .footer-text:hover {
-    color: green;
-  }
-  
-  .account-section {
-    margin-top: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-  }
-  
-  .profile-container {
-    background-color: #222;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    width: 80%;
-    max-width: 500px;
-  }
-  
-  .profile-pic {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
-  
-  .field {
-    margin: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .field label {
-    flex: 1;
-    color: white;
-    text-align: left;
-  }
-  
-  .field input {
-    flex: 2;
-    padding: 5px;
-    margin-left: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #111;
-    color: white;
-  }
-  
-  .edit-btn {
-    background: none;
-    border: none;
-    color: gold;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  .account-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  #logout-btn,
-  #delete-btn {
-    padding: 10px 20px;
-    border: none;
-    font-weight: bold;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #logout-btn {
-    background-color: #24292e;
-    color: white;
-  }
-  
-  #logout-btn:hover {
-    background-color: #00ff88;
-    color: black;
-  }
-  
-  #delete-btn {
-    background-color: #ff4d4d;
-    color: white;
-  }
-  
-  #delete-btn:hover {
-    background-color: #cc0000;
-  }
-  
-  
-  footer {
-    background-color: #111;
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .footer-text {
-    color: white;
-    transition: color 0.3s;
-  }
-  
+/* Header Styling */
+header {
+  background-color: black; /* Black background for header */
+  padding: 20px; /* Padding inside header */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Center items vertically */
+  position: fixed; /* Fix header at the top of the page */
+  width: 100%; /* Full width */
+  top: 0; /* Position at the top */
+  z-index: 1000; /* Keep header above other content */
+}
+
+/* Logo Section */
+.logo {
+  display: flex; /* Flexbox for logo items */
+  align-items: center; /* Vertically align logo and image */
+}
+
+.logo-text {
+  font-size: 36px; /* Large font size for logo text */
+  font-weight: bold; /* Make the logo text bold */
+  color: green; /* Green color for the logo text */
+}
+
+.logo-img {
+  width: 36px; /* Set logo image size */
+  height: 36px; /* Set logo image size */
+  margin-left: 10px; /* Space between text and logo image */
+}
+
+/* Navigation Bar Styling */
+nav ul {
+  list-style: none; /* Remove list bullets */
+  display: flex; /* Flexbox for horizontal layout */
+  gap: 40px; /* Space between menu items */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+nav ul li {
+  margin: 0 50px; /* Horizontal margin between items */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* Set link color to white */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+nav ul li a:hover,
+.footer-text:hover {
+  color: green; /* Change color to green on hover */
+}
+
+/* Account Section */
+.account-section {
+  margin-top: 120px; /* Push content down to avoid overlap with fixed header */
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  min-height: 80vh; /* Minimum height for the section */
+}
+
+/* Profile Container Styling */
+.profile-container {
+  background-color: #222; /* Dark background for profile container */
+  padding: 40px; /* Padding inside the profile container */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center; /* Center the text inside the container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Box shadow for depth */
+  width: 80%; /* Set width of the container */
+  max-width: 500px; /* Max width of the container */
+}
+
+/* Profile Picture Styling */
+.profile-pic {
+  width: 140px; /* Set profile picture width */
+  height: 140px; /* Set profile picture height */
+  border-radius: 50%; /* Make profile picture circular */
+  object-fit: cover; /* Cover the container without stretching */
+  margin-bottom: 20px; /* Space below the profile picture */
+}
+
+/* Editable Fields Styling */
+.field {
+  margin: 20px 0; /* Vertical margin */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between label and input */
+  align-items: center; /* Vertically align items */
+  background-color: #333; /* Dark background for the field */
+  padding: 10px; /* Padding inside the field */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.field label {
+  flex: 1; /* Take up remaining space for label */
+  color: white; /* White text color for labels */
+  text-align: left; /* Left-align label text */
+}
+
+.field input {
+  flex: 2; /* Input takes up more space */
+  padding: 5px; /* Padding inside the input field */
+  margin-left: 10px; /* Space between label and input */
+  border-radius: 5px; /* Rounded corners for input */
+  border: none; /* Remove border */
+  background-color: #111; /* Dark background for input */
+  color: white; /* White text color */
+}
+
+/* Edit Button Styling */
+.edit-btn {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  color: gold; /* Gold text color for edit button */
+  font-size: 1.2rem; /* Slightly larger font for button */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Account Action Buttons */
+.account-actions {
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between logout and delete buttons */
+  margin-top: 20px; /* Space above the buttons */
+}
+
+#logout-btn,
+#delete-btn {
+  padding: 10px 20px; /* Padding inside the buttons */
+  border: none; /* Remove borders */
+  font-weight: bold; /* Bold text */
+  font-size: 14px; /* Smaller font size */
+  cursor: pointer; /* Change cursor to pointer */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Logout Button Styling */
+#logout-btn {
+  background-color: #24292e; /* Dark background for logout button */
+  color: white; /* White text color */
+}
+
+#logout-btn:hover {
+  background-color: #00ff88; /* Green background on hover */
+  color: black; /* Black text color on hover */
+}
+
+/* Delete Button Styling */
+#delete-btn {
+  background-color: #ff4d4d; /* Red background for delete button */
+  color: white; /* White text color */
+}
+
+#delete-btn:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #111; /* Dark background for footer */
+  text-align: center; /* Center align footer text */
+  padding: 20px; /* Padding inside footer */
+}
+
+/* Footer Text Styling */
+.footer-text {
+  color: white; /* White text color for footer text */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}

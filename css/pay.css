@@ -1,44 +1,49 @@
+/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #000000; 
-    color: white; 
+    font-family: Arial, sans-serif; /* Use Arial or sans-serif font */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 100vh; /* Full viewport height */
+    background-color: #000000; /* Black background */
+    color: white; /* White text color */
 }
 
+/* Payment Container Styling */
 .payment-container {
-    background: #1c1b1b; 
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
-    width: 300px;
+    background: #1c1b1b; /* Dark background for the payment container */
+    padding: 40px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle white shadow around the container */
+    width: 300px; /* Fixed width for the container */
 }
 
-
+/* Input Fields and Buttons Styling */
 input, button {
-    width: 100%;
-    margin-top: 5px;
-    padding: 10px;
-    border: 1px solid #ffffff; 
-    border-radius: 5px;
-    background: #222222; 
-    color: white; 
+    width: 100%; /* Full width for both input fields and buttons */
+    margin-top: 5px; /* Small margin above the elements */
+    padding: 10px; /* Padding inside the input and button */
+    border: 1px solid #ffffff; /* White border */
+    border-radius: 5px; /* Rounded corners for input and button */
+    background: #222222; /* Dark background for input fields and button */
+    color: white; /* White text inside the input fields and button */
 }
 
+/* Placeholder Styling */
 input::placeholder {
-    color: #bbbbbb; 
+    color: #bbbbbb; /* Light gray color for placeholder text */
 }
 
+/* Button Styling */
 button {
-    background: #28a745; 
-    color: black;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
+    background: #28a745; /* Green background for the button */
+    color: black; /* Black text on the button */
+    border: none; /* Remove border from the button */
+    cursor: pointer; /* Pointer cursor when hovering */
+    font-weight: bold; /* Bold font weight for the button text */
 }
 
+/* Button Hover Effect */
 button:hover {
-    background: #218838; 
+    background: #218838; /* Darker green background when hovering */
 }

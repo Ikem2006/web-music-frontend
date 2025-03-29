@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Metadata and Page Title -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title> Musicians details - FEDS</title>
+  
+  <!-- Link to External CSS -->
   <link rel="stylesheet" href="../css/musician_detail.css"/>
 </head>
 <body>
+  <!-- Header Section -->
   <header>
     <div class="logo">
         <span class="logo-text">FEDS</span>
@@ -22,6 +26,7 @@
     </nav>
   </header>
 
+  <!-- Musician Profile Section -->
   <section class="musician-profile">
     <img id="artist-pic" src="../img/imgage.jpeg" alt="Profile Picture" />
     <h2 id="artist-name">Loading...</h2>
@@ -29,21 +34,25 @@
     <p id="artist-email"></p>
   </section>
 
+  <!-- Song Catalog Section -->
   <section class="catalog">
     <input type="text" id="search-song" placeholder="Search for a song..." />
     <ul id="song-list"></ul>
   </section>
 
+  <!-- Music Player Section -->
   <div id="music-player">
     <p id="now-playing">Now Playing: <span id="current-song-name">None</span></p>
     <audio id="audio-player" controls></audio>
   </div>
 
+  <!-- Footer Section -->
   <footer>
     <p class="footer-text">Contact us: <a href="mailto:FEDS@gmail.com">FEDS@gmail.com</a></p>
     <p class="footer-text">&copy; 2025 FEDS Music. All rights reserved.</p>
-</footer>
+  </footer>
 
+  <!-- Link to External JavaScript -->
   <script src="../js/musician_detail.js"></script>
 </body>
 </html>

@@ -1,72 +1,72 @@
 /* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Use Poppins font for the body text */
     background-color: #000; /* Black Background */
     color: #fff; /* White Text */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    display: flex; /* Use Flexbox for centering content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
 }
 
 /* Container */
 .container {
-    background: #121212; /* Dark Gray Card */
-    padding: 30px;
-    width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-    text-align: center;
+    background: #121212; /* Dark Gray Card Background */
+    padding: 30px; /* Padding inside the container */
+    width: 400px; /* Fixed width for the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow around the container */
+    text-align: center; /* Center the text inside the container */
 }
 
 /* Title */
 h2 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Space below the title */
     color: #fff; /* White Text */
 }
 
 /* Form Fields */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: left;
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack fields vertically */
+    gap: 15px; /* Space between form elements */
+    text-align: left; /* Align labels and inputs to the left */
 }
 
 label {
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 600; /* Bold labels */
+    font-size: 14px; /* Smaller font size for labels */
     color: #ddd; /* Light Gray Text */
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #555; /* Darker border */
-    border-radius: 5px;
-    font-size: 14px;
-    outline: none;
-    background: #222; /* Dark Input */
-    color: #fff; /* White Text */
-    transition: border-color 0.3s;
+    width: 100%; /* Full width for input fields */
+    padding: 10px; /* Padding inside the input fields */
+    margin-top: 5px; /* Space between label and input */
+    border: 1px solid #555; /* Darker border for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+    font-size: 14px; /* Font size for input text */
+    outline: none; /* Remove outline on focus */
+    background: #222; /* Dark Input Background */
+    color: #fff; /* White Text Inside Input */
+    transition: border-color 0.3s; /* Smooth transition for border color */
 }
 
 input:focus {
-    border-color: #1db954; /* Green Focus */
+    border-color: #1db954; /* Green border on focus */
 }
 
 /* Button Styles */
 button {
     background-color: #1db954; /* Spotify Green */
-    color: #fff;
-    border: none;
-    padding: 12px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: #fff; /* White Text */
+    border: none; /* No border for the button */
+    padding: 12px; /* Padding inside the button */
+    font-size: 16px; /* Font size for button text */
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background color change */
 }
 
 button:hover {
@@ -76,27 +76,28 @@ button:hover {
 /* Animations */
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(-10px);
+        opacity: 0; /* Start from invisible */
+        transform: translateY(-10px); /* Start slightly above */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* Fade in to visible */
+        transform: translateY(0); /* Move to original position */
     }
 }
 
+/* Forgot Password Link */
 .forgot-link {
-    margin-top: 10px;
-    text-align: center;
-  }
-  
-  .forgot-link a {
-    color: #1db954;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
-  }
-  
-  .forgot-link a:hover {
-    color: #17a64a;
-  }
+    margin-top: 10px; /* Space above the link */
+    text-align: center; /* Center the link */
+}
+
+.forgot-link a {
+    color: #1db954; /* Green color for the link */
+    text-decoration: none; /* Remove underline */
+    font-size: 14px; /* Font size for the link */
+    transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.forgot-link a:hover {
+    color: #17a64a; /* Darker green on hover */
+}

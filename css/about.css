@@ -1,152 +1,152 @@
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #1a1a1a;
-    color: white;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Header */
-  header {
-    background-color: black;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #22aa1c;
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo img {
-    width: 36px;
-    height: 36px;
-    margin-left: 10px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    margin: 0 50px;
+  font-family: Arial, sans-serif; /* Use Arial as the default font */
+  background-color: #1a1a1a; /* Dark background color */
+  color: white; /* White text color for contrast */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
-  nav ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover {
-    color: #22aa1c;
-  }
-  
-  /* About Section */
-  .about {
-    padding: 140px 20px 50px;
-    text-align: center;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  .about h1 {
-    color: #18af16;
-  }
-  
-  /* Features */
-  .features {
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .features h1 {
-    color: #18af16;
-  }
-  
-  .features ul {
-    max-width: 700px;
-    margin: auto;
-    text-align: left;
-    line-height: 1.8;
-  }
-  
-  /* Team Section */
-  .team {
-    text-align: center;
-    padding: 50px 20px;
-  }
-  
-  .team-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .team-member {
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    width: 220px;
-  }
-  
-  .team-member img {
-    width: 90px;
-    border-radius: 50%;
-  }
-  
-  /* Join Section */
-  .join {
-    text-align: center;
-    padding: 50px 20px;
-    background: #222;
-    margin: 40px auto;
-    max-width: 600px;
-    border-radius: 10px;
-  }
-  
-  .join h2 {
-    color: #18af16;
-  }
-  
-  .join .btn {
-    background: #18af16;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 10px;
-    display: inline-block;
-  }
-  
-  .join .btn:hover {
-    background-color: #0e770f;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: black;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-  }
-  
-  footer a {
-    color: #2db712;
-    text-decoration: none;
-  }
-  
+/* Header */
+header {
+  background-color: black; /* Black background for the header */
+  padding: 20px 40px; /* Padding around header content */
+  display: flex; /* Use flexbox for header layout */
+  justify-content: space-between; /* Space out logo and navigation */
+  align-items: center; /* Align items vertically in the center */
+  position: fixed; /* Keep header fixed at the top */
+  width: 100%; /* Full width */
+  top: 0; /* Place the header at the top */
+  z-index: 1000; /* Ensure header stays on top of other content */
+}
+
+.logo {
+  font-size: 24px; /* Large font size for the logo text */
+  font-weight: bold; /* Bold text for the logo */
+  color: #22aa1c; /* Green color for the logo */
+  display: flex; /* Use flexbox for aligning logo text and image */
+  align-items: center; /* Vertically center the logo elements */
+}
+
+.logo img {
+  width: 36px; /* Set the width of the logo image */
+  height: 36px; /* Set the height of the logo image */
+  margin-left: 10px; /* Add space between the logo text and image */
+}
+
+nav ul {
+  list-style: none; /* Remove default list style */
+  display: flex; /* Use flexbox for navigation items */
+  gap: 30px; /* Space between the navigation items */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+nav ul li {
+  margin: 0 50px; /* Space out the list items */
+}
+
+nav ul li a {
+  color: white; /* White color for navigation links */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s; /* Smooth color transition for hover effect */
+}
+
+nav ul li a:hover {
+  color: #22aa1c; /* Change color to green on hover */
+}
+
+/* About Section */
+.about {
+  padding: 140px 20px 50px; /* Add top padding to push the section below the fixed header */
+  text-align: center; /* Center the content */
+  max-width: 800px; /* Set a maximum width for the section */
+  margin: auto; /* Center the section horizontally */
+}
+
+.about h1 {
+  color: #18af16; /* Green color for the About section heading */
+}
+
+/* Features Section */
+.features {
+  text-align: center; /* Center the content */
+  padding: 50px 20px; /* Add padding around the section */
+}
+
+.features h1 {
+  color: #18af16; /* Green color for the Features section heading */
+}
+
+.features ul {
+  max-width: 700px; /* Set a max-width for the list */
+  margin: auto; /* Center the list horizontally */
+  text-align: left; /* Align list items to the left */
+  line-height: 1.8; /* Increase line height for better readability */
+}
+
+/* Team Section */
+.team {
+  text-align: center; /* Center the content */
+  padding: 50px 20px; /* Add padding around the section */
+}
+
+.team-container {
+  display: flex; /* Use flexbox to align team members */
+  justify-content: center; /* Center the team members */
+  gap: 20px; /* Space between the team member cards */
+  flex-wrap: wrap; /* Allow wrapping of team members if the screen is small */
+}
+
+.team-member {
+  background: #222; /* Dark background for each team member card */
+  padding: 20px; /* Padding inside each card */
+  border-radius: 10px; /* Rounded corners for the cards */
+  width: 220px; /* Set a fixed width for each team member card */
+}
+
+.team-member img {
+  width: 90px; /* Set the width of the team member's image */
+  border-radius: 50%; /* Make the image circular */
+}
+
+/* Join Section */
+.join {
+  text-align: center; /* Center the content */
+  padding: 50px 20px; /* Add padding around the section */
+  background: #222; /* Dark background for the join section */
+  margin: 40px auto; /* Center the section with margin */
+  max-width: 600px; /* Set a max-width for the section */
+  border-radius: 10px; /* Rounded corners for the join section */
+}
+
+.join h2 {
+  color: #18af16; /* Green color for the Join section heading */
+}
+
+.join .btn {
+  background: #18af16; /* Green background for the button */
+  color: white; /* White text for the button */
+  padding: 10px 20px; /* Padding inside the button */
+  border-radius: 5px; /* Rounded corners for the button */
+  text-decoration: none; /* Remove underline from the button */
+  margin-top: 10px; /* Add space between the heading and button */
+  display: inline-block; /* Ensure button behaves like an inline element */
+}
+
+.join .btn:hover {
+  background-color: #0e770f; /* Darker green background on hover */
+}
+
+/* Footer */
+footer {
+  background-color: black; /* Black background for the footer */
+  text-align: center; /* Center the text in the footer */
+  padding: 20px; /* Padding inside the footer */
+  margin-top: 40px; /* Space between the footer and the content above it */
+}
+
+footer a {
+  color: #2db712; /* Green color for footer links */
+  text-decoration: none; /* Remove underline from footer links */
+}

@@ -1,83 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Character encoding for proper text rendering -->
     <meta charset="UTF-8">
+    <!-- Viewport settings to ensure proper scaling on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FEDS Music</title>
+    <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="../css/home.css">
+    <!-- Linking external JavaScript file (deferred to load after the HTML is parsed) -->
     <script defer src="../js/home.js"></script>
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header Section -->
     <header>
+        <!-- Logo section -->
         <div class="logo">
-            <span class="logo-text">FEDS</span>
-            <img class="logo-img" src="../img/music.webp" alt="Logo">
+            <span class="logo-text">FEDS</span> <!-- Logo text -->
+            <img class="logo-img" src="../img/music.webp" alt="Logo"> <!-- Logo image -->
         </div>
+        <!-- Navigation Menu -->
         <nav>
             <ul>
-                <li><a href="admin_home.html">Home</a></li>
-                <li><a id="account-link" href="#">Account</a></li>
-                <li><a href="admin_artist.html">Artist</a></li>
-                <li><a href="get_client.html">Clients</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="admin_home.html">Home</a></li> <!-- Home link -->
+                <li><a id="account-link" href="#">Account</a></li> <!-- Account link -->
+                <li><a href="admin_artist.html">Artist</a></li> <!-- Artist link -->
+                <li><a href="get_client.html">Clients</a></li> <!-- Clients link -->
+                <li><a href="about.html">About Us</a></li> <!-- About Us link -->
             </ul>
         </nav>
     </header>
 
     <!-- Welcome Section -->
     <section class="welcome">
-        <h1>WELCOME TO FEDS MUSIC</h1>
-        <p>Stream and download your favorite songs.</p>
+        <h1>WELCOME TO FEDS MUSIC</h1> <!-- Main heading of the welcome section -->
+        <p>Stream and download your favorite songs.</p> <!-- Description of the service -->
     </section>
 
     <!-- Awards Section -->
     <section class="awards">
         <div class="award-image">
-            <img src="../img/award.jpeg" alt="Music Award">
+            <img src="../img/award.jpeg" alt="Music Award"> <!-- Image of the award -->
         </div>
         <div class="award-text">
-            <h2>Award-Winning Music Platform</h2>
-            <p>FEDS has been awarded the <strong>Most Used Music Website</strong> in 2025!</p>
+            <h2>Award-Winning Music Platform</h2> <!-- Award header -->
+            <p>FEDS has been awarded the <strong>Most Used Music Website</strong> in 2025!</p> <!-- Award description -->
         </div>
     </section>
 
     <!-- Testimonials Section -->
     <section class="testimonials">
-        <h2>WHAT THEY THINK</h2>
+        <h2>WHAT THEY THINK</h2> <!-- Heading for testimonials -->
         <div class="testimonial-container">
             <div class="testimonial-image">
-                <img id="testimonial-img" src="../img/kay.jpeg" alt="User">
+                <img id="testimonial-img" src="../img/kay.jpeg" alt="User"> <!-- Testimonial image -->
             </div>
             <div class="testimonial-text">
-                <p id="testimonial-text"></p>
+                <p id="testimonial-text"></p> <!-- Testimonial text will be injected here -->
             </div>
         </div>
         <div class="testimonial-nav">
-            <button id="prev" class="arrow">&lt;</button>
-            <button id="next" class="arrow">&gt;</button>
+            <button id="prev" class="arrow">&lt;</button> <!-- Previous button for testimonials -->
+            <button id="next" class="arrow">&gt;</button> <!-- Next button for testimonials -->
         </div>
     </section>
 
     <!-- Rating Section -->
     <section class="advertisement">
-        <h2>Enjoy the best music experience!</h2>
-        <p>Rate our website and let us know how we're doing.</p>
+        <h2>Enjoy the best music experience!</h2> <!-- Rating section heading -->
+        <p>Rate our website and let us know how we're doing.</p> <!-- Description of the rating section -->
         <div class="rating">
+            <!-- Star rating system -->
             <span class="star" data-value="1">★</span>
             <span class="star" data-value="2">★</span>
             <span class="star" data-value="3">★</span>
             <span class="star" data-value="4">★</span>
             <span class="star" data-value="5">★</span>
         </div>
-        <p id="rating-message">Click to rate!</p>
-        <p id="rating-result"></p>
+        <p id="rating-message">Click to rate!</p> <!-- Message prompting user to rate -->
+        <p id="rating-result"></p> <!-- Display result after rating -->
     </section>
 
-    <!-- Footer -->
+    <!-- Footer Section -->
     <footer>
-        <p class="footer-text">Contact us: <a href="mailto:FEDS@gmail.com">FEDS@gmail.com</a></p>
-        <p class="footer-text">&copy; 2025 FEDS Music. All rights reserved.</p>
+        <p class="footer-text">Contact us: <a href="mailto:FEDS@gmail.com">FEDS@gmail.com</a></p> <!-- Contact email -->
+        <p class="footer-text">&copy; 2025 FEDS Music. All rights reserved.</p> <!-- Copyright notice -->
     </footer>
 </body>
 </html>

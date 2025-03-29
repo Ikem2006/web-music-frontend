@@ -1,82 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FEDS Music</title>
-    <link rel="stylesheet" href="../css/home.css">
-    <script defer src="../js/home.js"></script>
+  <!-- Metadata and Page Title -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Page</title>
+  
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="../css/pay.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">
-            <span class="logo-text">FEDS</span>
-            <img class="logo-img" src="../img/music.webp" alt="Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="musician_home.html">Home</a></li>
-                <li><a id="account-link" href="#">Account</a></li>
-                <li><a href="musician_artist.html">Artist</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Payment Form Container -->
+  <div class="payment-container">
+    <h2>Payment Details</h2>
 
-    <!-- Welcome Section -->
-    <section class="welcome">
-        <h1>WELCOME TO FEDS MUSIC</h1>
-        <p>SStream and download your favorite songs.</p>
-    </section>
+    <!-- Payment Form -->
+    <form id="payment-form">
+      <!-- Account Name Input -->
+      <label for="account_name">Account Name</label>
+      <input type="text" id="account_name" name="account_name" required />
 
-    <!-- Awards Section -->
-    <section class="awards">
-        <div class="award-image">
-            <img src="../img/award.jpeg" alt="Music Award">
-        </div>
-        <div class="award-text">
-            <h2>Award-Winning Music Platform</h2>
-            <p>FEDS has been awarded the <strong>Most Used Music Website</strong> in 2025!</p>
-        </div>
-    </section>
+      <!-- Account Number Input -->
+      <label for="account_number">Account Number</label>
+      <input type="number" id="account_number" name="account_number" placeholder="5234567" required />
 
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <h2>WHAT THEY THINK</h2>
-        <div class="testimonial-container">
-            <div class="testimonial-image">
-                <img id="testimonial-img" src="../img/kay.jpeg" alt="User">
-            </div>
-            <div class="testimonial-text">
-                <p id="testimonial-text"></p>
-            </div>
-        </div>
-        <div class="testimonial-nav">
-            <button id="prev" class="arrow">&lt;</button>
-            <button id="next" class="arrow">&gt;</button>
-        </div>
-    </section>
+      <!-- Password Input -->
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
 
-    <!-- Rating Section -->
-    <section class="advertisement">
-        <h2>Enjoy the best music experience!</h2>
-        <p>Rate our website and let us know how we're doing.</p>
-        <div class="rating">
-            <span class="star" data-value="1">★</span>
-            <span class="star" data-value="2">★</span>
-            <span class="star" data-value="3">★</span>
-            <span class="star" data-value="4">★</span>
-            <span class="star" data-value="5">★</span>
-        </div>
-        <p id="rating-message">Click to rate!</p>
-        <p id="rating-result"></p>
-    </section>
+      <!-- Amount in Account Input -->
+      <label for="amount_in_account">Amount in Account</label>
+      <input type="number" id="amount_in_account" name="amount_in_account" required />
 
-    <!-- Footer -->
-    <footer>
-        <p class="footer-text">Contact us: <a href="mailto:FEDS@gmail.com">FEDS@gmail.com</a></p>
-        <p class="footer-text">&copy; 2025 FEDS Music. All rights reserved.</p>
-    </footer>
+      <!-- Expiry Date Input -->
+      <label for="user_expiry_date">Expiry Date</label>
+      <input type="text" id="user_expiry_date" name="user_expiry_date" placeholder="DD/MM/YY" required />
+
+      <!-- CVV Input -->
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" placeholder="123" required />
+
+      <!-- Submit Payment Button -->
+      <button type="submit">Pay Now</button>
+    </form>
+  </div>
+
+  <!-- Link to External JavaScript -->
+  <script src="../js/pay.js"></script>
 </body>
 </html>

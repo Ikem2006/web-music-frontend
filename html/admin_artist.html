@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Character encoding for proper text rendering -->
   <meta charset="UTF-8" />
+  <!-- Viewport settings to ensure proper scaling on different devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>All Musicians - FEDS</title>
+  <title>All Musicians - FEDS</title> <!-- Title of the page -->
+  <!-- Linking external CSS file for styling -->
   <link rel="stylesheet" href="../css/admin_artist.css"/>
 </head>
 <body>
+  <!-- Header Section -->
   <header>
+    <!-- Logo Section -->
     <div class="logo">
-        <span class="logo-text">FEDS</span>
-        <img class="logo-img" src="../img/music.webp" alt="Logo">
+        <span class="logo-text">FEDS</span> <!-- Logo text -->
+        <img class="logo-img" src="../img/music.webp" alt="Logo"> <!-- Logo image -->
     </div>
+    <!-- Navigation Menu -->
     <nav>
       <ul>
-        <li><a href="#" id="home-link">Home</a></li>
-        <li><a href="#" id="account-link">Account</a></li>
-        <li><a href="admin_artist.html">Artists</a></li>
-        <li><a href="get_client.html">Clients</a></li>
-        <li><a href="about.html">About Us</a></li>
+        <li><a href="#" id="home-link">Home</a></li> <!-- Home link -->
+        <li><a href="#" id="account-link">Account</a></li> <!-- Account link -->
+        <li><a href="admin_artist.html">Artists</a></li> <!-- Artists page link -->
+        <li><a href="get_client.html">Clients</a></li> <!-- Clients page link -->
+        <li><a href="about.html">About Us</a></li> <!-- About Us page link -->
       </ul>
     </nav>
   </header>
 
+  <!-- Search Section -->
   <section class="search-section">
+    <!-- Input for searching musicians -->
     <input type="text" id="search-bar" placeholder="Search musicians..."/>
   </section>
 
+  <!-- Musician List Section -->
   <section class="musician-list" id="musician-list">
-    <!-- Musician containers will be injected here -->
+    <!-- Musician containers will be injected here dynamically -->
   </section>
-  
-  <footer>
-    <p class="footer-text">Contact us: <a href="mailto:FEDS@gmail.com">FEDS@gmail.com</a></p>
-    <p class="footer-text">&copy; 2025 FEDS Music. All rights reserved.</p>
-</footer>
 
+  <!-- Footer Section -->
+  <footer>
+    <!-- Contact information -->
+    <p class="footer-text">Contact us: <a href="mailto:FEDS@gmail.com">FEDS@gmail.com</a></p>
+    <!-- Copyright notice -->
+    <p class="footer-text">&copy; 2025 FEDS Music. All rights reserved.</p>
+  </footer>
+
+  <!-- Linking external JavaScript file for dynamic functionality -->
   <script src="../js/admin_artist.js"></script>
 </body>
 </html>

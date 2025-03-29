@@ -7,10 +7,15 @@
   <link rel="stylesheet" href="../css/get_client.css" />
 </head>
 <body>
+  <!-- Header with logo and navigation menu -->
   <header>
+    <!-- Logo section with the brand name "FEDS" and logo image -->
     <div class="logo">FEDS <img src="../img/music.webp" alt="Logo" /></div>
+    
+    <!-- Navigation menu -->
     <nav>
       <ul>
+        <!-- Links to different admin sections -->
         <li><a href="admin_home.html">Home</a></li>
         <li><a href="admin_account.html">Account</a></li>
         <li><a href="admin_artist.html">Artist</a></li>
@@ -20,20 +25,26 @@
     </nav>
   </header>
 
+  <!-- Main content area -->
   <main>
+    <!-- Search bar to filter clients by name -->
     <div class="search-bar">
       <input type="text" id="search-input" placeholder="Search clients by name..." />
     </div>
+
+    <!-- Clients container where the client list will be dynamically injected -->
     <div class="clients-container" id="clients-container">
-      <!-- Clients will be injected here -->
+      <!-- Client entries will be inserted here by JavaScript -->
     </div>
   </main>
 
+  <!-- Footer with contact information -->
   <footer>
     <p>Contact us: <a href="mailto:FEDS@gmail.com">FEDS@gmail.com</a></p>
     <p>&copy; 2025 FEDS Music. All rights reserved.</p>
   </footer>
 
+  <!-- External JavaScript file for handling client data -->
   <script src="../js/get_client.js"></script>
 </body>
 </html>

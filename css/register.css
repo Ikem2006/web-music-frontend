@@ -1,45 +1,45 @@
 /* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Use 'Poppins' font */
     background-color: #000; /* Black Background */
     color: #fff; /* White Text */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    display: flex; /* Use flexbox for centering content */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
 }
 
-/* Container */
+/* Container Styling */
 .container {
-    background: #121212; /* Dark Gray Card */
-    padding: 30px;
-    width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
-    text-align: center;
+    background: #121212; /* Dark Gray background for the card */
+    padding: 30px; /* Padding inside the container */
+    width: 400px; /* Fixed width for the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1); /* Subtle shadow */
+    text-align: center; /* Center text inside the container */
 }
 
-/* Title */
+/* Title Styling */
 h2 {
-    margin-bottom: 20px;
-    color: #fff; /* White Text */
+    margin-bottom: 20px; /* Margin below the title */
+    color: #fff; /* White Text for the title */
 }
 
-/* Role Selection - Horizontal with Text Left and Radio Right */
+/* Role Selection - Horizontal Layout */
 .role-selection {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: flex-start; /* Align to the left */
-    gap: 20px; /* Space between options */
+    margin-bottom: 20px; /* Space below the role selection */
+    display: flex; /* Flexbox layout */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 20px; /* Space between role options */
 }
 
 .role-selection label {
-    display: flex;
-    justify-content: space-between;
-    width: 100px; /* Set a fixed width for alignment */
-    font-size: 16px;
-    cursor: pointer;
+    display: flex; /* Flexbox for label and radio button */
+    justify-content: space-between; /* Space out label and radio button */
+    width: 100px; /* Fixed width for label */
+    font-size: 16px; /* Font size for label */
+    cursor: pointer; /* Pointer cursor on hover */
 }
 
 /* Align radio buttons to the right */
@@ -47,67 +47,67 @@ h2 {
     margin-left: auto; /* Push radio button to the right */
 }
 
-/* Form Fields */
+/* Form Fields Styling */
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-align: left;
+    display: flex; /* Flexbox layout for the form */
+    flex-direction: column; /* Stack the form fields vertically */
+    gap: 15px; /* Space between form fields */
+    text-align: left; /* Left align the labels and inputs */
 }
 
 label {
-    font-weight: 600;
-    font-size: 14px;
-    color: #ddd; /* Light Gray Text */
+    font-weight: 600; /* Bold font for labels */
+    font-size: 14px; /* Smaller font size for labels */
+    color: #ddd; /* Light Gray Text for labels */
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #555; /* Darker border */
-    border-radius: 5px;
-    font-size: 14px;
-    outline: none;
-    background: #222; /* Dark Input */
-    color: #fff; /* White Text */
-    transition: border-color 0.3s;
+    width: 100%; /* Full width for input fields */
+    padding: 10px; /* Padding inside the input */
+    margin-top: 5px; /* Small space above the input */
+    border: 1px solid #555; /* Darker border for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+    font-size: 14px; /* Font size for input text */
+    outline: none; /* Remove outline on focus */
+    background: #222; /* Dark background for input */
+    color: #fff; /* White text inside the input */
+    transition: border-color 0.3s; /* Smooth transition for border color */
 }
 
 input:focus {
-    border-color: #1db954; /* Green Focus */
+    border-color: #1db954; /* Green border when input is focused */
 }
 
 /* Role-specific Fields */
 .role-fields {
-    display: none;
-    animation: fadeIn 0.3s ease-in-out;
+    display: none; /* Initially hide role-specific fields */
+    animation: fadeIn 0.3s ease-in-out; /* Fade-in animation when shown */
 }
 
 /* Green Register Button */
 button {
-    background-color: #1db954; /* Green Button */
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s;
+    background-color: #1db954; /* Green background for button */
+    color: white; /* White text on button */
+    padding: 10px; /* Padding inside the button */
+    border: none; /* Remove button border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size for button text */
+    transition: background 0.3s; /* Smooth background color transition */
 }
 
 button:hover {
-    background-color: #17a64a;
+    background-color: #17a64a; /* Darker green when hovering over the button */
 }
 
 /* Animations */
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(-10px);
+        opacity: 0; /* Start with 0 opacity */
+        transform: translateY(-10px); /* Start slightly above */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* End with full opacity */
+        transform: translateY(0); /* Move to the normal position */
     }
 }

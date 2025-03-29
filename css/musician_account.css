@@ -1,199 +1,213 @@
+/* General Styling */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: white;
-  }
-  
-  header {
-    background-color: black;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-text {
-    font-size: 36px;
-    font-weight: bold;
-    color: green;
-  }
-  
-  .logo-img {
-    width: 36px;
-    height: 36px;
-    margin-left: 10px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    margin: 0 50px;
-}
-  
-  nav ul li a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-  }
-  
-  nav ul li a:hover,
-  .footer-text:hover {
-    color: green;
-  }
-  
-  .account-section {
-    margin-top: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-  }
-  
-  .profile-container {
-    background-color: #222;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  }
-  
-  .profile-pic {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 20px;
-  }
-  
-  .field {
-    margin: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .field label {
-    flex: 1;
-    color: white;
-    text-align: left;
-  }
-  
-  .field input {
-    flex: 2;
-    padding: 5px;
-    margin-left: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #111;
-    color: white;
-  }
-  
-  .edit-btn {
-    background: none;
-    border: none;
-    color: gold;
-    font-size: 1.2rem;
-    cursor: pointer;
-  }
-  
-  .catalogue-upload {
-    margin-top: 30px;
-    text-align: left;
-  }
-  
-  .catalogue-upload input[type="file"] {
-    background: white;
-    color: black;
-    margin-top: 10px;
-  }
-  
-  .music-list {
-    margin-top: 30px;
-    text-align: left;
-  }
-  
-  .song-row {
-    display: flex;
-    justify-content: space-between;
-    background-color: #333;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .song-row a {
-    color: cyan;
-    text-decoration: none;
-  }
-  
-  .song-row a:hover {
-    text-decoration: underline;
-  }
-  .song-file-input {
-    margin-left: 10px;
-    color: white;
-  }
-  
-  .song-controls {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  .action-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-  }
-  
-  .logout-btn, .delete-btn {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .logout-btn {
-    background-color: #2ecc71;
-  }
-  
-  .logout-btn:hover, .delete-btn:hover {
-    opacity: 0.8;
-  }
-  
-  footer {
-    background-color: #111;
-    text-align: center;
-    padding: 20px;
+  font-family: Arial, sans-serif; /* Set font family for the entire page */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: black; /* Set background color to black */
+  color: white; /* Set text color to white */
 }
 
+/* Header Styling */
+header {
+  background-color: black; /* Black background for the header */
+  padding: 20px; /* Padding inside the header */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out logo and navigation */
+  align-items: center; /* Align items vertically */
+  position: fixed; /* Fix header at the top of the page */
+  width: 100%; /* Full width for header */
+  top: 0; /* Stick header to the top */
+  z-index: 1000; /* Ensure header stays on top */
+}
+
+/* Logo Styling */
+.logo {
+  display: flex; /* Use flexbox to align logo elements */
+  align-items: center; /* Vertically align logo elements */
+}
+
+.logo-text {
+  font-size: 36px; /* Font size for logo text */
+  font-weight: bold; /* Bold text for the logo */
+  color: green; /* Green color for logo text */
+}
+
+.logo-img {
+  width: 36px; /* Set width for the logo image */
+  height: 36px; /* Set height for the logo image */
+  margin-left: 10px; /* Space between logo text and image */
+}
+
+/* Navigation Menu */
+nav ul {
+  list-style: none; /* Remove default list style */
+  display: flex; /* Use flexbox for horizontal navigation */
+  gap: 40px; /* Space between navigation items */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+nav ul li {
+  margin: 0 50px; /* Horizontal space between items */
+}
+
+nav ul li a {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* Set link color to white */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+nav ul li a:hover,
+.footer-text:hover {
+  color: green; /* Change color to green on hover */
+}
+
+/* Account Section */
+.account-section {
+  margin-top: 120px; /* Add space to prevent overlap with fixed header */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  min-height: 90vh; /* Ensure the section takes up at least 90% of the viewport height */
+}
+
+/* Profile Container */
+.profile-container {
+  background-color: #222; /* Dark background for profile */
+  padding: 40px; /* Padding inside the profile container */
+  border-radius: 10px; /* Rounded corners for the container */
+  text-align: center; /* Center the text inside the container */
+  width: 80%; /* Set the width of the container */
+  max-width: 600px; /* Maximum width of the container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Add subtle shadow around the profile */
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 140px; /* Set width of the profile picture */
+  height: 140px; /* Set height of the profile picture */
+  border-radius: 50%; /* Make the picture circular */
+  object-fit: cover; /* Crop the image to fit the container */
+  margin-bottom: 20px; /* Space below the profile picture */
+}
+
+/* Field Styling for Editable Information */
+.field {
+  margin: 20px 0; /* Vertical space between fields */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out label and input */
+  align-items: center; /* Align items vertically */
+  background-color: #333; /* Dark background for the fields */
+  padding: 10px; /* Padding inside the fields */
+  border-radius: 5px; /* Rounded corners for the fields */
+}
+
+.field label {
+  flex: 1; /* Label takes up 1/3 of the space */
+  color: white; /* White color for labels */
+  text-align: left; /* Align text to the left */
+}
+
+.field input {
+  flex: 2; /* Input field takes up 2/3 of the space */
+  padding: 5px; /* Padding inside the input field */
+  margin-left: 10px; /* Space between label and input */
+  border-radius: 5px; /* Rounded corners for input field */
+  border: none; /* Remove border */
+  background-color: #111; /* Dark background for input field */
+  color: white; /* White text inside input field */
+}
+
+/* Edit Button for Profile */
+.edit-btn {
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  color: gold; /* Set color to gold */
+  font-size: 1.2rem; /* Set font size */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+/* File Upload for Catalogue */
+.catalogue-upload {
+  margin-top: 30px; /* Space above file upload */
+  text-align: left; /* Align text to the left */
+}
+
+.catalogue-upload input[type="file"] {
+  background: white; /* White background for file input */
+  color: black; /* Black text for file input */
+  margin-top: 10px; /* Space above the file input */
+}
+
+/* Music List Styling */
+.music-list {
+  margin-top: 30px; /* Space above music list */
+  text-align: left; /* Align text to the left */
+}
+
+.song-row {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out song name and actions */
+  background-color: #333; /* Dark background for each song row */
+  padding: 10px; /* Padding inside each song row */
+  margin-bottom: 10px; /* Space below each song row */
+  border-radius: 5px; /* Rounded corners for song rows */
+}
+
+.song-row a {
+  color: cyan; /* Set link color to cyan */
+  text-decoration: none; /* Remove underline from song links */
+}
+
+.song-row a:hover {
+  text-decoration: underline; /* Underline song links on hover */
+}
+
+.song-file-input {
+  margin-left: 10px; /* Space between input and the rest of the row */
+  color: white; /* White text color */
+}
+
+/* Song Controls (Play, Pause, etc.) */
+.song-controls {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically align controls */
+  gap: 10px; /* Space between controls */
+}
+
+/* Action Buttons (Logout, Delete) */
+.action-buttons {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out buttons */
+  margin-top: 30px; /* Space above action buttons */
+}
+
+.logout-btn, .delete-btn {
+  background-color: #e74c3c; /* Red background for buttons */
+  color: white; /* White text for buttons */
+  border: none; /* Remove borders from buttons */
+  padding: 10px 20px; /* Padding inside the buttons */
+  border-radius: 5px; /* Rounded corners for buttons */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.logout-btn {
+  background-color: #2ecc71; /* Green background for logout button */
+}
+
+.logout-btn:hover, .delete-btn:hover {
+  opacity: 0.8; /* Slightly reduce opacity on hover */
+}
+
+/* Footer */
+footer {
+  background-color: #111; /* Dark background for footer */
+  text-align: center; /* Center content inside the footer */
+  padding: 20px; /* Padding inside the footer */
+}
+
+/* Footer Text */
 .footer-text {
-    transition: color 0.3s;
-    color: white;
+  transition: color 0.3s; /* Smooth color transition on hover */
+  color: white; /* White text color for footer text */
 }
-
-  

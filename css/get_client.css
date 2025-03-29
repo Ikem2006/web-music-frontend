@@ -13,7 +13,147 @@ body {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    width: 100%;
+    width: 100%;/* Global Styles */
+    body {
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+        font-family: Arial, sans-serif; /* Set font to Arial */
+        background-color: black; /* Set black background */
+        color: white; /* Set text color to white */
+    }
+    
+    /* Header Styles */
+    header {
+        background-color: black; /* Black background for header */
+        padding: 20px; /* Padding inside the header */
+        display: flex; /* Use flexbox for layout */
+        justify-content: space-between; /* Space between logo and navigation */
+        align-items: center; /* Align logo and nav vertically */
+        position: fixed; /* Fixed position at the top */
+        width: 100%; /* Full width */
+        top: 0; /* Stick to the top of the page */
+        z-index: 1000; /* Ensure header stays above other content */
+    }
+    
+    /* Logo Styles */
+    .logo {
+        font-size: 24px; /* Font size for the logo text */
+        font-weight: bold; /* Bold text for the logo */
+        color: green; /* Green color for the logo */
+    }
+    
+    .logo img {
+        width: 40px; /* Set width of logo image */
+        height: auto; /* Automatic height to maintain aspect ratio */
+        margin-left: 10px; /* Space between logo text and image */
+        vertical-align: middle; /* Align image vertically with text */
+    }
+    
+    /* Navigation Styles */
+    nav ul {
+        list-style: none; /* Remove default list style */
+        display: flex; /* Use flexbox for horizontal navigation */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+    }
+    
+    nav ul li {
+        margin: 0 40px; /* Space between navigation items */
+    }
+    
+    nav ul li a {
+        text-decoration: none; /* Remove underline from links */
+        color: white; /* Set link color to white */
+        transition: color 0.3s; /* Smooth transition on hover */
+    }
+    
+    nav ul li a:hover {
+        color: rgb(29, 150, 23); /* Change color to green on hover */
+    }
+    
+    /* Main Content Area */
+    main {
+        padding: 140px 20px 40px; /* Add padding around the content, leave space for the fixed header */
+        max-width: 1200px; /* Set a maximum width for the main content */
+        margin: auto; /* Center the main content */
+    }
+    
+    /* Search Bar Styles */
+    .search-bar {
+        text-align: center; /* Center the search bar */
+        margin-bottom: 30px; /* Space below the search bar */
+    }
+    
+    .search-bar input {
+        width: 50%; /* Set the width of the search input */
+        padding: 10px; /* Padding inside the input field */
+        border-radius: 5px; /* Rounded corners for the input */
+        border: none; /* Remove border */
+        font-size: 16px; /* Set font size for the input text */
+    }
+    
+    /* Clients Section */
+    .clients-container {
+        display: flex; /* Use flexbox for layout */
+        flex-wrap: wrap; /* Allow items to wrap to new lines */
+        gap: 20px; /* Space between client cards */
+        justify-content: center; /* Center the items */
+    }
+    
+    /* Client Card Styles */
+    .client-card {
+        background-color: #222; /* Dark background for the card */
+        padding: 20px; /* Padding inside the card */
+        border-radius: 10px; /* Rounded corners for the card */
+        width: 250px; /* Fixed width for each card */
+        text-align: center; /* Center the text inside the card */
+        position: relative; /* Allows absolute positioning for the delete button */
+        box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Subtle shadow for the card */
+    }
+    
+    .client-card img {
+        width: 100px; /* Set width for the client image */
+        height: 100px; /* Set height for the client image */
+        border-radius: 50%; /* Make the image circular */
+        object-fit: cover; /* Ensure the image covers the area without distortion */
+    }
+    
+    .client-card h3 {
+        margin: 10px 0 5px; /* Margin for the heading */
+        font-size: 20px; /* Set font size for client name */
+    }
+    
+    .client-card p {
+        margin: 0; /* Remove margin from paragraph */
+        color: gray; /* Set text color to gray */
+        font-size: 14px; /* Set smaller font size */
+    }
+    
+    /* Delete Button Styles */
+    .delete-btn {
+        position: absolute; /* Absolute positioning relative to the client card */
+        top: 10px; /* Position the button at the top-right corner */
+        right: 10px; /* Position the button at the right */
+        color: red; /* Red color for the delete button */
+        cursor: pointer; /* Change cursor to pointer when hovered */
+        font-size: 20px; /* Set font size for the button */
+        background: none; /* Remove background */
+        border: none; /* Remove border */
+    }
+    
+    /* Footer Styles */
+    footer {
+        background-color: #111; /* Dark background for the footer */
+        text-align: center; /* Center the text in the footer */
+        padding: 20px; /* Padding inside the footer */
+        margin-top: 40px; /* Space above the footer */
+    }
+    
+    /* Footer Link Styles */
+    footer a {
+        color: green; /* Green color for links in the footer */
+    }
+    
     top: 0;
     z-index: 1000;
   }
@@ -23,6 +163,7 @@ body {
     font-weight: bold;
     color: green;
   }
+
   
   .logo img {
     width: 40px;
